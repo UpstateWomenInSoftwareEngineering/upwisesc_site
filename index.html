@@ -36,12 +36,18 @@
       border: none;
       border-radius: 10px;
       color: #fff;
-      margin-bottom: 20px;
+      margin-bottom: 5vh;
     }
     .footer {
       background: rgba(0, 0, 0, 0.5);
       padding: 1rem;
       text-align: center;
+    }
+    .logo {
+      max-width: 100%; 
+      height: auto;
+      align-items: center;
+      margin-bottom: 5vh;
     }
   </style>
 </head>
@@ -93,8 +99,8 @@
   <!-- Hero Section -->
   <header class="hero">
     <div class="container">
-      <img src="img/UpWiSE_Logo.png" width="480" style="margin-bottom:10px" alt="UpWiSE Upstate Women In Software Engineering logo, which has alternating colored letters within a stylized application window">
-      <p><a href="https://refactorgvl.com"><img src="img/RGVL_Badge_Horizontal.svg" width="200" style="margin-bottom:10px" alt="RefactorGVL"></a></p>
+      <img class="logo" src="img/UpWiSE_Logo.png" alt="UpWiSE Upstate Women In Software Engineering logo, which has alternating colored letters within a stylized application window">
+      <p><a href="https://refactorgvl.com"><img src="img/RGVL_Badge_Horizontal.svg" width="200" style="margin-bottom:10px; max-width:100%;" alt="RefactorGVL"></a></p>
       <p><a href="https://www.meetup.com/upwise-upstate-women-in-software-engineering/" class="btn btn-primary btn-lg">Join a Meetup Session</a></p>
       <p><a href="https://forms.gle/fSMDwDY4kFViggwd7" class="btn btn-primary btn-lg">Sign Up for the UpWiSE Newsletter</a></p>
     </div>
@@ -102,7 +108,7 @@
 
   <!-- Main Content -->
   <main class="container my-5">
-    <div class="row" id="about">
+    <div class="row" id="about" style="height: 30vh;">
       <div class="col-lg-12">
         <div class="card p-2">
           <h2 class="card-title">We are an empowered group within RefactorGVL, serving the upstate of South Carolina.</h2>
