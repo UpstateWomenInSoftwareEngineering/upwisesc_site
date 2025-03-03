@@ -1,150 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Upstate Women in Software Engineering</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS for Gradient -->
-  <style>
-    body {
-      background: linear-gradient(to right, #6a1b9a, #ff5722, #1c1c84);
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      font-family: Rubik, sans-serif;
-    }
-    .navbar {
-      background: rgba(0, 0, 0, 0.5);
-    }
-    .btn {
-      background: linear-gradient(to right, #6a1b9a, #ff5722, #1c1c84);
-      border: none;
-    }
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.4);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .card {
-      background: rgba(255, 255, 255, 0.1);
-      border: none;
-      border-radius: 10px;
-      color: #fff;
-      margin-bottom: 5vh;
-    }
-    .footer {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 1rem;
-      text-align: center;
-    }
-    .logo {
-      max-width: 100%; 
-      height: auto;
-      align-items: center;
-      margin-bottom: 5vh;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpWiSE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #FEFCFE;
+            color: #20163B;
+        }
+        .navbar {
+            background-color: #AA00FF;
+        }
+        .navbar-brand, .nav-link {
+            font-weight: bold;
+            color: #F9EFEF;
+        }
+        .nav-link:hover {
+            color: #20163B;
+        }
+        .img{
+          color:#F9EFEF
+        }
+        .btn-primary {
+            background-color: #AA00FF;
+            border-color: #AA00FF;
+        }
+        .btn-primary:hover {
+            background-color: #F42A63;
+            border-color: #F42A63;
+        }
+        .btn-secondary {
+            background-color: #FF9D85;
+            border-color: #FF9D85;
+            color: #20163B;
+        }
+        .btn-secondary:hover {
+            background-color: #F42A63;
+            border-color: #F42A63;
+            color: #F9EFEF;
+        }
+        .card {
+            background-color: #F9EFEF;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+        .card h3 {
+            color: #00B3B3;
+            font-weight: bold;
+        }
+        .footer {
+            background-color: #20163B;
+            color: #F9EFEF;
+        }
+        .about-section {
+            background-color: #F9EFEF;
+            border-radius: 10px;
+            padding: 40px 0;
+        }
+        .about-section h2 {
+            margin-left: 5%;
+            color: #00B3B3;
+        }
+        .about-section p {
+            margin-left: 5%;
+            font-size: 1.1rem;
+            color: #20163B;
+            line-height: 1.6;
+        }
+        .about-section img {
+            max-width: 80%;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">UpWiSE</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://buy.stripe.com/7sI16O1hQ5dp7Li147">Donate</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.meetup.com/upwise-upstate-women-in-software-engineering/">Meetup</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/UpstateWomenInSoftwareEngineering">Github</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/UpWiSESC">X</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.facebook.com/upwisesc">Facebook</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.instagram.com/upwisesc">Instagram</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://pinnate-goldenrod-da6.notion.site/Welcome-to-UpWiSE-b8615ab6afe84b53beba25929f9a7b3e?pvs=4">Notion</a>
-          </li>
-          <li class="nav-item"></li>
-            <a class="nav-link" href="https://forms.gle/fSMDwDY4kFViggwd7">Newsletter</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="mailto:upwisesc@gmail.com">Email</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="container">
-      <img class="logo" src="img/UpWiSE_Logo.png" alt="UpWiSE Upstate Women In Software Engineering logo, which has alternating colored letters within a stylized application window">
-      <p><a href="https://refactorgvl.com"><img src="img/RGVL_Badge_Horizontal.svg" width="200" style="margin-bottom:10px; max-width:100%;" alt="RefactorGVL"></a></p>
-      <p><a href="https://www.meetup.com/upwise-upstate-women-in-software-engineering/" class="btn btn-primary btn-lg">Join a Meetup Session</a></p>
-      <p><a href="https://forms.gle/fSMDwDY4kFViggwd7" class="btn btn-primary btn-lg">Sign Up for the UpWiSE Newsletter</a></p>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main class="container my-5">
-    <div class="row" id="about" style="height: 30vh;">
-      <div class="col-lg-12">
-        <div class="card p-2">
-          <h2 class="card-title">We are an empowered group within RefactorGVL, serving the upstate of South Carolina.</h2>
-          <p class="card-text">Through the support of RefactorGVL, we are able to assist women across South Carolina in building their technical skills and leadership abilities.</p>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+              <!-- <img src="img/UpWiSE_Logo.png" width="30" height="30" alt=""> -->
+              UpWiSE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://buy.stripe.com/7sI16O1hQ5dp7Li147">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.meetup.com/upwise-upstate-women-in-software-engineering/">Meetup</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/UpstateWomenInSoftwareEngineering">GitHub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://twitter.com/UpWiSESC">Twitter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/upwisesc">Facebook</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/upwisesc">Instagram</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <div class="card p-3">
-          <h2 class="card-title">We support women who are interested in entering technology roles.</h2>
-          <p class="card-text">We provide training sessions, resources, projects, and career advice to help women on their journey.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card p-3">
-          <h2 class="card-title">We help women who are already in technology fields persist and excel.</h2>
-          <p class="card-text">We have many members who are mid to late career who share their wisdom with us.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card p-3">
-          <h2 class="card-title">We create opportunities for learning, curiosity, and connection.</h2>
-          <p class="card-text">We foster an inclusive and positive environment throughout our meetups, projects, and events.</p>
-        </div>
-      </div>
-    </div>
-  </main>
+    </nav>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2024 UpWiSE and RefactorGVL. All rights reserved.</p>
-  </footer>
+    <header class="text-center py-5 bg-light">
+        <img src="img/UpWiSE_Logo.png" alt="UpWiSE Logo" class="mb-3" width="300">
+        <h1 class="fw-bold">Empowering Women in Tech Across South Carolina</h1>
+        <div class="mt-3">
+            <a href="https://www.meetup.com/upwise-upstate-women-in-software-engineering/" class="btn btn-primary">Join a Meetup</a>
+            <a href="https://forms.gle/fSMDwDY4kFViggwd7" class="btn btn-secondary">Sign Up for Newsletter</a>
+        </div>
+    </header>
 
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <main class="container py-5">
+        <section id="about" class="about-section mb-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold">About Us</h2>
+                        <p>We are an empowered group within <strong>RefactorGVL</strong>, serving the upstate of South Carolina.</p>
+                        <p>Through the support of RefactorGVL, we assist women across South Carolina in building their technical skills and leadership abilities.</p>
+                        <p>We support women entering technology roles and those already in the field to persist and excel.</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="img/RGVL_Badge_Horizontal.svg" alt="Women in Tech" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <h3>Supporting Women Entering Tech</h3>
+                    <p>We provide training sessions, resources, projects, and career advice to help women on their journey.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <h3>Helping Women Persist and Excel</h3>
+                    <p>We have many members who are mid to late career who share their wisdom with us.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <h3>Creating Opportunities in Tech</h3>
+                    <p>We foster an inclusive and positive environment throughout our meetups, projects, and events.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center footer py-3">
+        <p>© 2024 UpWiSE and RefactorGVL. All rights reserved.</p>
+        <img src="img/RGVL_Badge_Horizontal.svg" alt="Sponsor Logo" class="mt-2" width="100">
+    </footer>
 </body>
 </html>
