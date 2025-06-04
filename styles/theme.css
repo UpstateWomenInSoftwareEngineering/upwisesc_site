@@ -1,0 +1,92 @@
+:root {
+  --upwise-purple: #AA00FF;
+  --upwise-pink: #F42A63;
+  --upwise-coral: #FF9D85;
+  --upwise-teal: #00B3B3;
+  --upwise-cream: #FEFCFE;
+  --upwise-blush: #F9EFEF;
+  --upwise-navy: #20163B;
+}
+
+html {
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--upwise-cream);
+  color: var(--upwise-navy);
+}
+
+.navbar {
+  background-color: var(--upwise-purple);
+}
+
+.navbar-brand,
+.nav-link {
+  font-weight: bold;
+  color: var(--upwise-blush);
+}
+
+.nav-link:hover {
+  color: var(--upwise-navy);
+}
+
+.img {
+  color: var(--upwise-blush);
+}
+
+.btn-primary {
+  background-color: var(--upwise-purple);
+  border-color: var(--upwise-purple);
+}
+
+.btn-primary:hover {
+  background-color: var(--upwise-pink);
+  border-color: var(--upwise-pink);
+}
+
+.btn-secondary {
+  background-color: var(--upwise-coral);
+  border-color: var(--upwise-coral);
+  color: var(--upwise-navy);
+}
+
+.btn-secondary:hover {
+  background-color: var(--upwise-pink);
+  border-color: var(--upwise-pink);
+  color: var(--upwise-blush);
+}
+
+.uw-card {
+  background-color: var(--upwise-blush);
+  border: none;
+}
+
+.uw-card h3 {
+  color: var(--upwise-teal);
+  font-weight: bold;
+}
+
+.footer {
+  background-color: var(--upwise-navy);
+  color: var(--upwise-blush);
+}
+
+.about-section {
+  background-color: var(--upwise-blush);
+}
+
+.about-section h3,
+h5 {
+  color: var(--upwise-teal);
+}
+
+.about-section p,
+ol {
+  color: var(--upwise-navy);
+}
+
+/*# sourceMappingURL=theme.css.map */
