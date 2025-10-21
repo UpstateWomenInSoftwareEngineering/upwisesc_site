@@ -129,7 +129,7 @@ main .container .uw-row {
 
 header {
   width: 100vw;
-  height: calc(100vh - var(--space-2xl));
+  min-height: calc(100vh - var(--space-2xl));
   padding: 0;
   margin: 0;
   display: flex;
@@ -145,13 +145,18 @@ header .container {
   gap: var(--space-l);
 }
 header .container .splash {
-  width: var(--space-11xl-12xl);
+  max-height: 33vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 header .container .splash img {
-  width: 100%;
+  width: auto;
+  height: 100%;
+  max-height: 33vh;
   height: auto;
 }
-header .container h1 {
+header .container h2 {
   margin-bottom: 0;
 }
 header .container .ctas {
@@ -185,13 +190,12 @@ footer .container img {
 }
 
 .uw-card {
-  height: 100%;
   padding: var(--space-xl);
   border-radius: var(--space-2xs);
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: stretch;
+  justify-content: flex-start;
   flex: 1;
   box-shadow: 0 var(--space-3xs) var(--space-2xs) rgba(0, 0, 0, 0.1);
 }
