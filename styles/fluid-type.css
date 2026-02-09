@@ -49,8 +49,8 @@ h2 {
 }
 
 h1 {
-  font-size: var(--step-6);
-  line-height: var(--step-8);
+  font-size: var(--step-5);
+  line-height: var(--step-7);
 }
 
 .navbar-brand {

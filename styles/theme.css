@@ -98,7 +98,6 @@ body {
 
 .text-accent {
     color: var(--pink);
-    font-style: italic;
 }
 
 .underline-accent {
