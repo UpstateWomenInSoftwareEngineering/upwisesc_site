@@ -44,198 +44,156 @@
     --space-11xl-12xl: clamp(22rem, 18.3636rem + 15.5152vw, 30rem);    /* Space 11xl-12xl: 352px → 480px */
 }
 
-// Layout ---------------------------------------
+// Layout ----------------------------------------
 
-// Central column for content
 .container {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 var(--space-m);
-    margin: 0 0;
 }
 
+// Navbar
 .navbar {
-    min-height: var(--space-2xl);
-    max-height: var(--space-2xl);
-    display: flex;
-    justify-content: center;
+    padding: var(--space-xs) 0;
 
-    .navbar-brand,
-    .nav-item {
-        min-width: var(--space-2xl);
+    .container {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .navbar-brand,
-    .nav-link {
-        padding: var(--space-3xs);
-        margin: 0;
-    }
-
-    .navbar-nav {
-        gap: var(--space-3xs);
-    }
-
-    .navbar-toggler {
-        padding: 0;
-    }
-
-    .navbar-collapse.show,
-    .navbar-collapse.collapsing {
-        .navbar-nav {
-            width: 100%;
-            padding: var(--space-l) var(--space-m) var(--space-xl) var(--space-m);
-            background-color: var(--upwise-purple);
-            position: absolute;
-            top: var(--space-2xl);
-            right: 0;
-            align-items: end;
-        }
     }
 }
 
+// Hero
+.hero {
+    padding: var(--space-xl) 0 var(--space-2xl);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-s);
+    }
+
+    h1 {
+        max-width: 700px;
+        margin-bottom: 0;
+    }
+
+    .hero-subtitle {
+        margin-bottom: var(--space-s);
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+}
+
+// Main
 main {
-    width: 100vw;
+    width: 100%;
+}
+
+// Sections
+section {
+    padding: var(--space-xl-2xl) 0;
+}
+
+// Two-column layout
+.two-col {
     display: flex;
-    flex-direction: column;
+    gap: var(--space-xl);
     align-items: center;
 
-    .container {
-        padding: var(--space-xl) var(--space-m);
-        display: flex;
-        flex-direction: column;
+    &.align-top {
+        align-items: flex-start;
+    }
+
+    &.align-center {
         align-items: center;
-        justify-content: center;
-        gap: var(--space-m);
+    }
 
-        #about,
-        #code_of_conduct {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            text-align: left;
-
-            >* {
-                flex: 1;
-            }
-        }
-
-        #about {
-            gap: var(--space-xl);
-
-            > :last-child {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-
-        .uw-row {
-            display: flex !important;
-            flex-direction: row;
-            align-items: stretch !important;
-            justify-content: stretch;
-            gap: var(--space-m);
-            flex-wrap: wrap;
-        }
+    .col-content,
+    .col-image {
+        flex: 1;
+        min-width: 0;
     }
 }
 
-header {
-    width: 100vw;
-    height: calc(100vh - var(--space-2xl));
-    padding: 0;
-    margin: 0;
+// CTA button groups
+.ctas {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
 
+    .btn {
+        padding: var(--space-2xs) var(--space-m);
+    }
+}
+
+// Highlight block spacing
+.highlight-block {
+    padding: var(--space-s);
+    margin-bottom: var(--space-m);
+}
+
+// Section-specific layout -----------------------
+
+// Mission: text column wider than image
+.section-mission {
+    .col-content {
+        flex: 1.2;
+    }
+    .col-image {
+        flex: 0.8;
+    }
+}
+
+// Sponsor: logo column narrower
+.section-sponsor {
+    .col-image {
+        flex: 0.8;
+    }
+    .col-content {
+        flex: 1.2;
+    }
+}
+
+// Team: constrain photo width
+.section-team {
+    .col-image {
+        max-width: 280px;
+    }
+}
+
+// Code of Conduct
+.section-coc {
     .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: var(--space-l);
+        max-width: 900px;
+    }
 
-        .splash {
-            width: var(--space-11xl-12xl);
-
-            img {
-                width: 100%;
-                height: auto;
-            }
-        }
-
-        h1 {
-            margin-bottom: 0;
-        }
-
-        .ctas {
-            display: flex;
-            justify-content: center;
-            gap: var(--space-xs);
-            flex-wrap: wrap;
-
-            .btn {
-                width: var(--space-7xl);
-                padding: var(--space-2xs) var(--space-s);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-        }
+    ol {
+        padding-left: var(--space-m);
     }
 }
 
-footer {
-    display: flex;
-    justify-content: center;
+// Speaker grid
+.speaker-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-m);
+    margin-top: var(--space-m);
+}
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: var(--space-m);
-        padding: var(--space-xl) 0;
+// Footer
+.footer {
+    padding: var(--space-2xl) 0;
 
-        img {
-            width: var(--space-4xl);
-        }
+    .ctas {
+        margin-top: var(--space-xs);
     }
 }
 
-// Elements -------------------------------------
-
-.uw-card {
-    height: 100%;
-    padding: var(--space-xl);
-    border-radius: var(--space-2xs);
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: stretch;
-    flex: 1;
-    box-shadow: 0 var(--space-3xs) var(--space-2xs) rgba(0, 0, 0, 0.1);
-
-    .uw-card-body {
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: stretch;
-        margin-bottom: auto;
-
-        p:last-child {
-            margin-bottom: 0;
-        }
-    }
-}
-
+// Typography spacing
 p,
 h1,
 h2,
@@ -243,19 +201,42 @@ h3,
 h4,
 h5,
 h6 {
-    margin-bottom: var(--space-m);
+    margin-bottom: var(--space-s);
 }
 
-// Media queries --------------------------------
+// Responsive ------------------------------------
 
 @media (max-width: 768px) {
-
-    #about {
-        flex-direction: column !important;
-        gap: var(--space-2xs) !important;
+    .two-col {
+        flex-direction: column;
+        gap: var(--space-m);
     }
 
-    .uw-row {
-        flex-direction: column !important;
+    .section-mission {
+        .col-content,
+        .col-image {
+            flex: 1;
+        }
+    }
+
+    .section-sponsor {
+        .col-image,
+        .col-content {
+            flex: 1;
+        }
+    }
+
+    .section-team {
+        .col-image {
+            max-width: 100%;
+        }
+    }
+
+    .speaker-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        max-width: 100%;
     }
 }

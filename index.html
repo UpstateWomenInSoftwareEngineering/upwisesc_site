@@ -22,116 +22,168 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <!-- Navbar -->
+    <nav class="navbar">
         <div class="container">
             <a class="navbar-brand" href="#">
-              <!-- <img src="img/UpWiSE_Logo.png" width="30" height="30" alt=""> -->
-              UpWiSE
+                <span class="brand-icon"></span>
+                UpWiSE
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#code_of_conduct">Code of Conduct</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://forms.gle/FUSQx2RRRVRKud1eA">Join Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://buy.stripe.com/7sI16O1hQ5dp7Li147">Donate</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://luma.com/upwisesc">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/UpstateWomenInSoftwareEngineering">GitHub</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://twitter.com/UpWiSESC">Twitter</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/upwisesc">Facebook</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/upwisesc">Instagram</a></li>
-                </ul>
-            </div>
+            <a class="btn btn-primary nav-cta" href="#">Join Today</a>
         </div>
     </nav>
 
-    <header class="text-center bg-light">
+    <!-- Hero -->
+    <header class="hero">
         <div class="container">
-            <div class="splash">
-                <img src="img/UpWiSE_Logo.png" alt="UpWiSE Logo">
-            </div>
-            <h1 class="fw-bold">Empowering Women in Tech Across South Carolina</h1>
-            <div class="ctas">
-                <a href="https://luma.com/upwisesc/" class="btn btn-primary">Attend an Event</a>
-                <a href="https://forms.gle/fSMDwDY4kFViggwd7" class="btn btn-secondary">Sign Up for Newsletter</a>
-                <a href="https://forms.gle/FUSQx2RRRVRKud1eA" class="btn btn-primary">Become a Member</a>
+            <h1>Empowering <em class="text-accent">Women in Tech</em> across South Carolina</h1>
+            <p class="hero-subtitle">Lorem ipsum dolor sit amet.</p>
+            <div class="hero-image">
+                <div class="img-placeholder wide">Image placeholder</div>
             </div>
         </div>
     </header>
 
     <main>
-        <div class="container">
-            <section id="about" class="uw-card">
-                <div>
-                    <h3 class="fw-bold">About Us</h3>
-                    <p>We are an empowered group within <strong>RefactorGVL</strong>, serving the upstate of South Carolina.</p>
-                    <p>Through the support of RefactorGVL, we assist women across South Carolina in building their technical skills and leadership abilities.</p>
-                    <p>We support women entering technology roles and those already in the field to persist and excel.</p>
-                </div>
-                <div>
-                    <img src="img/RGVL_Badge_Horizontal.svg" alt="Women in Tech" class="img-fluid rounded shadow-lg">
-                </div>
-            </section>
-
-            <div class="uw-row">
-                <div class="uw-card">
-                    <div class="uw-card-header">
-                        <h5>Supporting Women Entering Tech</h5>
+        <!-- We are something-driven -->
+        <section class="section-mission">
+            <div class="container">
+                <div class="two-col">
+                    <div class="col-content">
+                        <h2>We are <span class="underline-accent">something-driven</span></h2>
+                        <div class="highlight-block">
+                            <p><mark>This should be a blurb about WHO UpWiSE is.</mark> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
                     </div>
-                    <div class="uw-card-body">
-                        <p>We provide training sessions, resources, projects, and career advice to help women on their journey.</p>
-                    </div>
-                </div>
-                <div class="uw-card">
-                    <div class="uw-card-header">
-                        <h5>Helping Women Persist and Excel</h5>
-                    </div>
-                    <div class="uw-card-body">
-                        <p>We have many members who are mid to late career who share their wisdom with us.</p>
-                    </div>
-                </div>
-                <div class="uw-card">
-                    <div class="uw-card-header">
-                        <h5>Creating Opportunities in Tech</h5>
-                    </div>
-                    <div class="uw-card-body">
-                        <p>We foster an inclusive and positive environment throughout our meetups, projects, and events.</p>
+                    <div class="col-image">
+                        <div class="img-placeholder tall">Image placeholder</div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <section id="code_of_conduct" class="uw-card">
-                <div>
-                    <h3 class="fw-bold">Code of Conduct</h3>
-                    <p>We do not tolerate abusive language of any kind in our space.  This group was created as a <strong>safe space</strong> for all members, including our staff.  Please be kind, respectful, helpful, and professional in all interactions.</p>
-                    <h5>UpWiSE Policies</h5>
-                    <p>
-                    <ol>
-                        <li><strong>Be Respectful:</strong>  Always treat others with kindness and respect. Disagreements are okay, but keep the conversation civil and constructive.</li>
-                        <li><strong>No Harassment:</strong>  Harassment of any kind, including offensive language, personal attacks, or belittling others, will not be tolerated.</li>
-                        <li><strong>Constructive Feedback Only:</strong>  When offering feedback, make sure it is helpful and supportive.  Focus on the work, not the person.</li>
-                        <li><strong>Respect Privacy:</strong>  Do not share private messages or sensitive information from the channel without explicit permission.</li>
-                        <li><strong>No Trolling or Disruptive Behavior:</strong>  Avoid posting messages intended to provoke or disrupt the flow of conversations.</li>
-                        <li><strong>Listen to Others:</strong>  Let everyone have a chance to speak and contribute. Avoid interrupting or dominating the conversation.</li>
-                        <li><strong>Be Inclusive:</strong>  Ensure your posts are welcoming and inclusive to all members, regardless of background or experience level.</li>
-                        <li><strong>Support Over Criticism:</strong>  Encourage others and highlight the positive.  If there is an issue, address it with respect and a solution-oriented mindset.</li>
-                        <li><strong>Use Professional Language:</strong>  Keep the tone professional and courteous at all times.  Avoid using inappropriate or offensive language,  This includes cursing or threatening behavior towards any member.</li>
-                        <li><strong>Assume Good Intentions:</strong>  If someone's post seems off, give them the benefit of the doubt.  Ask for clarification politely before reacting.</li>
-                    </ol></p>
-                    <p>It may help to ask yourself the following before posting or making a comment in public: "If my future boss was in this group, would I want them to see this?"</p>
-                    <h5>Consequences of Breaking This Policy</h5>
-                    <p>The above policies are enforced with zero tolerance. Any community participants found to be in violation will be immediately removed from the UpWiSE community and all its platforms.</p>
+        <!-- We want to help women persist -->
+        <section class="section-persist">
+            <div class="container">
+                <div class="two-col align-top">
+                    <div class="col-content">
+                        <h2>We want to help women persist and excel in the tech ecosystem.</h2>
+                    </div>
+                    <div class="col-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="ctas">
+                            <a class="btn btn-secondary" href="#">Events</a>
+                            <a class="btn btn-primary" href="#">Join Today</a>
+                        </div>
+                    </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+
+        <!-- RefactorGVL Sponsor -->
+        <section class="section-sponsor">
+            <div class="container">
+                <div class="two-col align-center">
+                    <div class="col-image">
+                        <div class="img-placeholder sponsor-logo">RefactorGVL Logo</div>
+                    </div>
+                    <div class="col-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <a class="btn btn-primary" href="#">Donate</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- These women keep us together -->
+        <section class="section-team">
+            <div class="container">
+                <div class="two-col">
+                    <div class="col-content">
+                        <h2>These women keep us <span class="underline-accent">together</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum turpis et lacus venenatis tristique. Vivamus et lacinia magna. Nulla in facilisis nisi consectetur.</p>
+                    </div>
+                    <div class="col-image">
+                        <div class="team-photo-wrapper">
+                            <div class="img-placeholder">Image placeholder</div>
+                            <div class="team-label">
+                                <strong>Jen Bauer</strong>
+                                <span>Founder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code of Conduct -->
+        <section id="code_of_conduct" class="section-coc">
+            <div class="container">
+                <h3>Code of Conduct</h3>
+                <ol>
+                    <li><strong>Be Respectful:</strong> Always treat others with kindness and respect. Disagreements are okay, but keep the conversation civil and constructive.</li>
+                    <li><strong>No Harassment:</strong> Harassment of any kind, including offensive language, personal attacks, or belittling others, will not be tolerated.</li>
+                    <li><strong>Constructive Feedback Only:</strong> When offering feedback, make sure it is helpful and supportive. Focus on the work, not the person.</li>
+                    <li><strong>Respect Privacy:</strong> Do not share private messages or sensitive information from the channel without explicit permission.</li>
+                    <li><strong>No Trolling or Disruptive Behavior:</strong> Avoid posting messages intended to provoke or disrupt the flow of conversations.</li>
+                    <li><strong>Listen to Others:</strong> Let everyone have a chance to speak and contribute. Avoid interrupting or dominating the conversation.</li>
+                </ol>
+                <a class="read-more" href="#">Read More &rarr;</a>
+            </div>
+        </section>
+
+        <!-- Photo + CTA -->
+        <section class="section-photo-cta">
+            <div class="container">
+                <div class="two-col">
+                    <div class="col-image">
+                        <div class="img-placeholder wide">Image placeholder</div>
+                    </div>
+                    <div class="col-content">
+                        <h2 class="fw-bold">Lorem ipsum dolor sit amet porta</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <div class="ctas">
+                            <a class="btn btn-primary" href="#">Join Today</a>
+                            <a class="btn btn-secondary" href="#">Events</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Previous speakers -->
+        <section class="section-speakers">
+            <div class="container">
+                <h2>Some of our <span class="underline-accent">previous speakers</span></h2>
+                <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat quistrums.</p>
+                <div class="speaker-grid">
+                    <div class="speaker-card">
+                        <div class="img-placeholder">Image placeholder</div>
+                        <div class="speaker-name">Jane Doe</div>
+                    </div>
+                    <div class="speaker-card">
+                        <div class="img-placeholder">Image placeholder</div>
+                        <div class="speaker-name">Jane Doe</div>
+                    </div>
+                    <div class="speaker-card">
+                        <div class="img-placeholder">Image placeholder</div>
+                        <div class="speaker-name">John Doe</div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Come say hello footer -->
     <footer class="footer">
         <div class="container">
-            <span>©2024 - 2025 UpWiSE and RefactorGVL. All rights reserved.</span>
-            <img src="img/RGVL_Badge_Horizontal.svg" alt="Sponsor Logo">
+            <h2><em>Come say hello!</em></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="ctas">
+                <a class="btn btn-primary" href="#">Join Today</a>
+                <a class="btn btn-outline" href="#">Events</a>
+            </div>
         </div>
     </footer>
 
