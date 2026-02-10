@@ -178,7 +178,6 @@ body {
 }
 .section-coc h3 {
     color: var(--cream);
-    font-weight: 700;
 }
 .section-coc ol {
     color: var(--cream);
@@ -189,13 +188,10 @@ body {
 .section-coc .read-more {
     color: var(--cream);
     text-decoration: none;
-    font-weight: 600;
     display: block;
     text-align: right;
 }
-.section-coc .read-more:hover {
-    text-decoration: underline;
-}
+
 
 /* Team section ---------------------------------- */
 
