@@ -278,4 +278,5 @@ body {
 .speaker-card .speaker-title {
   color: var(--cream);
   font-size: var(--step--1);
+  line-height: var(--step-1);
 }
