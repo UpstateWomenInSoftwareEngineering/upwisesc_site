@@ -280,3 +280,7 @@ body {
   font-size: var(--step--1);
   line-height: var(--step-1);
 }
+
+.speaker-card:hover {
+  rotate: -2deg;
+}
