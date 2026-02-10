@@ -66,12 +66,12 @@
 
 // Hero
 .hero {
-    padding: var(--space-xl) 0 var(--space-2xl);
+    padding: 100px 0;
 
     .container {
         display: flex;
         flex-direction: column;
-        gap: var(--space-s);
+        gap: 24px;
     }
 
     h1 {
@@ -80,10 +80,11 @@
     }
 
     .hero-subtitle {
-        margin-bottom: var(--space-s);
+        margin-bottom: 0;
     }
 
     .hero-image {
+        margin-top: 24px; // 24px gap + 24px extra = 48px from text to image
         width: 100%;
     }
 }
@@ -93,15 +94,15 @@ main {
     width: 100%;
 }
 
-// Sections
+// Sections: 100px top + 100px bottom = 200px between adjacent sections
 section {
-    padding: var(--space-xl-2xl) 0;
+    padding: 100px 0;
 }
 
-// Two-column layout
+// Two-column layout: 48px gap between text and content columns
 .two-col {
     display: flex;
-    gap: var(--space-xl);
+    gap: 48px;
     align-items: center;
 
     &.align-top {
@@ -133,7 +134,7 @@ section {
 // Highlight block spacing
 .highlight-block {
     padding: var(--space-s);
-    margin-bottom: var(--space-m);
+    margin-bottom: 24px;
 }
 
 // Section-specific layout -----------------------
@@ -176,24 +177,24 @@ section {
     }
 }
 
-// Speaker grid
+// Speaker grid: 48px from text group to grid, 24px between cards
 .speaker-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-m);
-    margin-top: var(--space-m);
+    gap: 24px;
+    margin-top: 48px;
 }
 
 // Footer
 .footer {
-    padding: var(--space-2xl) 0;
+    padding: 100px 0;
 
     .ctas {
-        margin-top: var(--space-xs);
+        margin-top: 24px; // extra 24px → 48px from text to buttons
     }
 }
 
-// Typography spacing
+// Typography spacing: 24px between vertical elements
 p,
 h1,
 h2,
@@ -201,7 +202,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin-bottom: var(--space-s);
+    margin-bottom: 24px;
 }
 
 // Responsive ------------------------------------
@@ -209,7 +210,7 @@ h6 {
 @media (max-width: 768px) {
     .two-col {
         flex-direction: column;
-        gap: var(--space-m);
+        gap: 48px;
     }
 
     .section-mission {
