@@ -53,8 +53,8 @@ body {
 /* Buttons --------------------------------------- */
 
 .btn-primary {
-  background-color: var(--pink);
-  border: 2px solid var(--pink);
+  background-color: var(--dark);
+  border: 2px solid var(--dark);
   color: var(--white);
   border-radius: 6px;
 }
@@ -62,8 +62,8 @@ body {
 .btn-primary:hover,
 .btn-primary:focus {
   background-color: transparent;
-  border-color: var(--pink);
-  color: var(--pink);
+  border-color: var(--dark);
+  color: var(--dark);
 }
 
 .btn-secondary {
@@ -78,6 +78,20 @@ body {
   background-color: transparent;
   border-color: var(--dark-purple);
   color: var(--dark-purple);
+}
+
+.btn-tertiary {
+  background-color: var(--cream);
+  border: 2px solid var(--cream);
+  color: var(--dark);
+  border-radius: 6px;
+}
+
+.btn-tertiary:hover,
+.btn-tertiary:focus {
+  background-color: transparent;
+  border-color: var(--cream);
+  color: var(--cream);
 }
 
 .btn-outline {
