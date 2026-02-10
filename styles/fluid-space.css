@@ -205,6 +205,8 @@ section {
     aspect-ratio: 1 / 1;
     min-height: unset;
     background-color: #f2edeb;
+    transition: ease-in-out;
+    transition-duration: 0.2s;
 }
 
 .image-grid .img-placeholder:hover {
