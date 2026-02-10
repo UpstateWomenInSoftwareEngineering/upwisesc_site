@@ -149,6 +149,15 @@ section {
     }
 }
 
+// Alignment utility
+.align-right {
+    text-align: right;
+
+    .ctas {
+        justify-content: flex-end;
+    }
+}
+
 // Sponsor: logo column narrower
 .section-sponsor {
     .col-image {

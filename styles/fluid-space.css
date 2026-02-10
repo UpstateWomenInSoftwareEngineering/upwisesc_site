@@ -135,6 +135,14 @@ section {
     flex: 0.8;
 }
 
+/* Alignment utility */
+.align-right {
+    text-align: right;
+}
+.align-right .ctas {
+    justify-content: flex-end;
+}
+
 /* Sponsor: logo column narrower */
 .section-sponsor .col-image {
     flex: 0.8;
