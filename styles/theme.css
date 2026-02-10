@@ -253,12 +253,12 @@ body {
 /* Footer ---------------------------------------- */
 
 .footer {
-    background-color: var(--dark-purple);
-    color: var(--cream);
+    /* background-color: var(--dark-purple);
+    color: var(--cream); */
 }
 .footer h2 {
-    color: var(--cream);
+    /* color: var(--cream); */
 }
 .footer p {
-    color: var(--cream);
+    /* color: var(--cream); */
 }
