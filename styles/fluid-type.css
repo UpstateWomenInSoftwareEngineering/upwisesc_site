@@ -30,6 +30,15 @@ a {
     text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Handjet", sans-serif;
+}
+
 h6 {
   font-size: var(--step-1);
   line-height: var(--step-2);
@@ -56,8 +65,8 @@ h2 {
 }
 
 h1 {
-  font-size: var(--step-5);
-  line-height: var(--step-6);
+  font-size: var(--step-7);
+  line-height: var(--step-8);
 }
 
 .navbar-brand {
