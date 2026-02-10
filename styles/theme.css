@@ -240,8 +240,9 @@ body {
 
 .speaker-card .speaker-name {
   color: var(--cream);
-  font-size: var(--step-1);
-  line-height: var(--step-3);
+  font-size: var(--step-3);
+  line-height: var(--step-4);
+    font-family: "Handjet", sans-serif;
 }
 
 .speaker-card .speaker-title {
