@@ -135,6 +135,13 @@ section {
     flex: 0.8;
 }
 
+/* Width constraint utility (desktop only) */
+@media (min-width: 769px) {
+    constrain-60 {
+        max-width: 60vw;
+    }
+}
+
 /* Alignment utility */
 .align-right {
     text-align: right;
