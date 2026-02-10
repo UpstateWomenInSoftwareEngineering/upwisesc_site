@@ -28,22 +28,13 @@ body {
 }
 .navbar .navbar-brand {
   color: var(--dark-purple);
-  font-weight: 700;
   text-decoration: none;
+  font-weight: 500;
+  font-family: "Handjet", sans-serif;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-.navbar .navbar-brand:hover {
-  color: var(--dark-purple);
-}
-
-.brand-icon {
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  background-color: var(--light-purple);
-  border-radius: 50%;
+  font-size: var(--step-3);
 }
 
 .nav-cta {
@@ -242,7 +233,7 @@ body {
   color: var(--cream);
   font-size: var(--step-3);
   line-height: var(--step-4);
-    font-family: "Handjet", sans-serif;
+  font-family: "Handjet", sans-serif;
 }
 
 .speaker-card .speaker-title {
