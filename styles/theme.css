@@ -129,6 +129,7 @@ body {
     font-size: var(--step--1);
     width: 100%;
     min-height: 200px;
+    object-fit: cover;
 }
 .img-placeholder.wide {
     aspect-ratio: 16 / 7;
