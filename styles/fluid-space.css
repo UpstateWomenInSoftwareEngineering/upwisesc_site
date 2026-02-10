@@ -1,216 +1,361 @@
 :root {
-    /*
+  /*
     Fluid space scale
     @link https://utopia.fyi/space/calculator?c=375,16,1.125,1200,20,1.25,8,2,&s=0.75|0.5|0.25,1.25|1.5|2|4|6|8|10|12|14|16|18|20|22|24,&g=s,l,xl,12
     */
-    --space-3xs: clamp(0.25rem, 0.2216rem + 0.1212vw, 0.3125rem); /* Space 3xs: 4px → 5px */
-    --space-2xs: clamp(0.5rem, 0.4432rem + 0.2424vw, 0.625rem);   /* Space 2xs: 8px → 10px */
-    --space-xs: clamp(0.75rem, 0.6648rem + 0.3636vw, 0.9375rem);  /* Space xs: 12px → 15px */
-    --space-s: clamp(1rem, 0.8864rem + 0.4848vw, 1.25rem);        /* Space s: 16px → 20px */
-    --space-m: clamp(1.25rem, 1.108rem + 0.6061vw, 1.5625rem);    /* Space m: 20px → 25px */
-    --space-l: clamp(1.5rem, 1.3295rem + 0.7273vw, 1.875rem);     /* Space l: 24px → 30px */
-    --space-xl: clamp(2rem, 1.7727rem + 0.9697vw, 2.5rem);        /* Space xl: 32px → 40px */
-    --space-2xl: clamp(4rem, 3.5455rem + 1.9394vw, 5rem);         /* Space 2xl: 64px → 80px */
-    --space-3xl: clamp(6rem, 5.3182rem + 2.9091vw, 7.5rem);       /* Space 3xl: 96px → 120px */
-    --space-4xl: clamp(8rem, 7.0909rem + 3.8788vw, 10rem);        /* Space 4xl: 128px → 160px */
-    --space-5xl: clamp(10rem, 8.8636rem + 4.8485vw, 12.5rem);     /* Space 5xl: 160px → 200px */
-    --space-6xl: clamp(12rem, 10.6364rem + 5.8182vw, 15rem);      /* Space 6xl: 192px → 240px */
-    --space-7xl: clamp(14rem, 12.4091rem + 6.7879vw, 17.5rem);    /* Space 7xl: 224px → 280px */
-    --space-8xl: clamp(16rem, 14.1818rem + 7.7576vw, 20rem);      /* Space 8xl: 256px → 320px */
-    --space-9xl: clamp(18rem, 15.9545rem + 8.7273vw, 22.5rem);    /* Space 9xl: 288px → 360px */
-    --space-10xl: clamp(20rem, 17.7273rem + 9.697vw, 25rem);      /* Space 10xl: 320px → 400px */
-    --space-11xl: clamp(22rem, 19.5rem + 10.6667vw, 27.5rem);     /* Space 11xl: 352px → 440px */
-    --space-12xl: clamp(24rem, 21.2727rem + 11.6364vw, 30rem);    /* Space 12xl: 384px → 480px */
-    /* One-up pairs */
-    --space-3xs-2xs: clamp(0.25rem, 0.0795rem + 0.7273vw, 0.625rem);   /* Space 3xs-2xs: 4px → 10px */
-    --space-2xs-xs: clamp(0.5rem, 0.3011rem + 0.8485vw, 0.9375rem);   /* Space 2xs-xs: 8px → 15px */
-    --space-xs-s: clamp(0.75rem, 0.5227rem + 0.9697vw, 1.25rem);       /* Space xs-s: 12px → 20px */
-    --space-s-m: clamp(1rem, 0.7443rem + 1.0909vw, 1.5625rem);        /* Space s-m: 16px → 25px */
-    --space-m-l: clamp(1.25rem, 0.9659rem + 1.2121vw, 1.875rem);      /* Space m-l: 20px → 30px */
-    --space-l-xl: clamp(1.5rem, 1.0455rem + 1.9394vw, 2.5rem);        /* Space l-xl: 24px → 40px */
-    --space-xl-2xl: clamp(2rem, 0.6364rem + 5.8182vw, 5rem);            /* Space xl-2xl: 32px → 80px */
-    --space-2xl-3xl: clamp(4rem, 2.4091rem + 6.7879vw, 7.5rem);        /* Space 2xl-3xl: 64px → 120px */
-    --space-3xl-4xl: clamp(6rem, 4.1818rem + 7.7576vw, 10rem);         /* Space 3xl-4xl: 96px → 160px */
-    --space-4xl-5xl: clamp(8rem, 5.9545rem + 8.7273vw, 12.5rem);        /* Space 4xl-5xl: 128px → 200px */
-    --space-5xl-6xl: clamp(10rem, 7.7273rem + 9.697vw, 15rem);          /* Space 5xl-6xl: 160px → 240px */
-    --space-6xl-7xl: clamp(12rem, 9.5rem + 10.6667vw, 17.5rem);        /* Space 6xl-7xl: 192px → 280px */
-    --space-7xl-8xl: clamp(14rem, 11.2727rem + 11.6364vw, 20rem);      /* Space 7xl-8xl: 224px → 320px */
-    --space-8xl-9xl: clamp(16rem, 13.0455rem + 12.6061vw, 22.5rem);    /* Space 8xl-9xl: 256px → 360px */
-    --space-9xl-10xl: clamp(18rem, 14.8182rem + 13.5758vw, 25rem);     /* Space 9xl-10xl: 288px → 400px */
-    --space-10xl-11xl: clamp(20rem, 16.5909rem + 14.5455vw, 27.5rem);   /* Space 10xl-11xl: 320px → 440px */
-    --space-11xl-12xl: clamp(22rem, 18.3636rem + 15.5152vw, 30rem);    /* Space 11xl-12xl: 352px → 480px */
+  --space-3xs: clamp(
+    0.25rem,
+    0.2216rem + 0.1212vw,
+    0.3125rem
+  ); /* Space 3xs: 4px → 5px */
+  --space-2xs: clamp(
+    0.5rem,
+    0.4432rem + 0.2424vw,
+    0.625rem
+  ); /* Space 2xs: 8px → 10px */
+  --space-xs: clamp(
+    0.75rem,
+    0.6648rem + 0.3636vw,
+    0.9375rem
+  ); /* Space xs: 12px → 15px */
+  --space-s: clamp(
+    1rem,
+    0.8864rem + 0.4848vw,
+    1.25rem
+  ); /* Space s: 16px → 20px */
+  --space-m: clamp(
+    1.25rem,
+    1.108rem + 0.6061vw,
+    1.5625rem
+  ); /* Space m: 20px → 25px */
+  --space-l: clamp(
+    1.5rem,
+    1.3295rem + 0.7273vw,
+    1.875rem
+  ); /* Space l: 24px → 30px */
+  --space-xl: clamp(
+    2rem,
+    1.7727rem + 0.9697vw,
+    2.5rem
+  ); /* Space xl: 32px → 40px */
+  --space-2xl: clamp(
+    4rem,
+    3.5455rem + 1.9394vw,
+    5rem
+  ); /* Space 2xl: 64px → 80px */
+  --space-3xl: clamp(
+    6rem,
+    5.3182rem + 2.9091vw,
+    7.5rem
+  ); /* Space 3xl: 96px → 120px */
+  --space-4xl: clamp(
+    8rem,
+    7.0909rem + 3.8788vw,
+    10rem
+  ); /* Space 4xl: 128px → 160px */
+  --space-5xl: clamp(
+    10rem,
+    8.8636rem + 4.8485vw,
+    12.5rem
+  ); /* Space 5xl: 160px → 200px */
+  --space-6xl: clamp(
+    12rem,
+    10.6364rem + 5.8182vw,
+    15rem
+  ); /* Space 6xl: 192px → 240px */
+  --space-7xl: clamp(
+    14rem,
+    12.4091rem + 6.7879vw,
+    17.5rem
+  ); /* Space 7xl: 224px → 280px */
+  --space-8xl: clamp(
+    16rem,
+    14.1818rem + 7.7576vw,
+    20rem
+  ); /* Space 8xl: 256px → 320px */
+  --space-9xl: clamp(
+    18rem,
+    15.9545rem + 8.7273vw,
+    22.5rem
+  ); /* Space 9xl: 288px → 360px */
+  --space-10xl: clamp(
+    20rem,
+    17.7273rem + 9.697vw,
+    25rem
+  ); /* Space 10xl: 320px → 400px */
+  --space-11xl: clamp(
+    22rem,
+    19.5rem + 10.6667vw,
+    27.5rem
+  ); /* Space 11xl: 352px → 440px */
+  --space-12xl: clamp(
+    24rem,
+    21.2727rem + 11.6364vw,
+    30rem
+  ); /* Space 12xl: 384px → 480px */
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(
+    0.25rem,
+    0.0795rem + 0.7273vw,
+    0.625rem
+  ); /* Space 3xs-2xs: 4px → 10px */
+  --space-2xs-xs: clamp(
+    0.5rem,
+    0.3011rem + 0.8485vw,
+    0.9375rem
+  ); /* Space 2xs-xs: 8px → 15px */
+  --space-xs-s: clamp(
+    0.75rem,
+    0.5227rem + 0.9697vw,
+    1.25rem
+  ); /* Space xs-s: 12px → 20px */
+  --space-s-m: clamp(
+    1rem,
+    0.7443rem + 1.0909vw,
+    1.5625rem
+  ); /* Space s-m: 16px → 25px */
+  --space-m-l: clamp(
+    1.25rem,
+    0.9659rem + 1.2121vw,
+    1.875rem
+  ); /* Space m-l: 20px → 30px */
+  --space-l-xl: clamp(
+    1.5rem,
+    1.0455rem + 1.9394vw,
+    2.5rem
+  ); /* Space l-xl: 24px → 40px */
+  --space-xl-2xl: clamp(
+    2rem,
+    0.6364rem + 5.8182vw,
+    5rem
+  ); /* Space xl-2xl: 32px → 80px */
+  --space-2xl-3xl: clamp(
+    4rem,
+    2.4091rem + 6.7879vw,
+    7.5rem
+  ); /* Space 2xl-3xl: 64px → 120px */
+  --space-3xl-4xl: clamp(
+    6rem,
+    4.1818rem + 7.7576vw,
+    10rem
+  ); /* Space 3xl-4xl: 96px → 160px */
+  --space-4xl-5xl: clamp(
+    8rem,
+    5.9545rem + 8.7273vw,
+    12.5rem
+  ); /* Space 4xl-5xl: 128px → 200px */
+  --space-5xl-6xl: clamp(
+    10rem,
+    7.7273rem + 9.697vw,
+    15rem
+  ); /* Space 5xl-6xl: 160px → 240px */
+  --space-6xl-7xl: clamp(
+    12rem,
+    9.5rem + 10.6667vw,
+    17.5rem
+  ); /* Space 6xl-7xl: 192px → 280px */
+  --space-7xl-8xl: clamp(
+    14rem,
+    11.2727rem + 11.6364vw,
+    20rem
+  ); /* Space 7xl-8xl: 224px → 320px */
+  --space-8xl-9xl: clamp(
+    16rem,
+    13.0455rem + 12.6061vw,
+    22.5rem
+  ); /* Space 8xl-9xl: 256px → 360px */
+  --space-9xl-10xl: clamp(
+    18rem,
+    14.8182rem + 13.5758vw,
+    25rem
+  ); /* Space 9xl-10xl: 288px → 400px */
+  --space-10xl-11xl: clamp(
+    20rem,
+    16.5909rem + 14.5455vw,
+    27.5rem
+  ); /* Space 10xl-11xl: 320px → 440px */
+  --space-11xl-12xl: clamp(
+    22rem,
+    18.3636rem + 15.5152vw,
+    30rem
+  ); /* Space 11xl-12xl: 352px → 480px */
 }
 
 /* Layout ---------------------------------------- */
 
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-m);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-m);
 }
 
 /* Navbar */
 .navbar {
-    padding: var(--space-xs) 0;
+  padding: var(--space-xs) 0;
 }
 .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Hero */
 .hero {
-    padding: 100px 0;
+  padding: 100px 0;
 }
 .hero .container {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 .hero h1 {
-    max-width: 80%;
-    margin-bottom: 0;
+  max-width: 80%;
+  margin-bottom: 0;
 }
 .hero .hero-subtitle {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 .hero .hero-image {
-    margin-top: 24px; /* 24px gap + 24px extra = 48px from text to image */
-    width: 100%;
+  margin-top: 24px; /* 24px gap + 24px extra = 48px from text to image */
+  width: 100%;
 }
 
 /* Main */
 main {
-    width: 100%;
+  width: 100%;
 }
 
 /* Sections: 100px top + 100px bottom = 200px between adjacent sections */
 section {
-    padding: 100px 0;
+  padding: 100px 0;
 }
 
 /* Two-column layout: 48px gap between text and content columns */
 .two-col {
-    display: flex;
-    gap: 48px;
-    align-items: center;
+  display: flex;
+  gap: 48px;
+  align-items: center;
 }
 .two-col.align-top {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 .two-col.align-center {
-    align-items: center;
+  align-items: center;
 }
 .two-col .col-content,
 .two-col .col-image {
-    flex: 1;
-    min-width: 0;
+  flex: 1;
+  min-width: 0;
 }
 
 /* CTA button groups */
 .ctas {
-    display: flex;
-    gap: var(--space-xs);
-    flex-wrap: wrap;
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
 }
 .ctas .btn {
-    padding: var(--space-2xs) var(--space-m);
+  padding: var(--space-2xs) var(--space-m);
 }
 
 /* Highlight block spacing */
 .highlight-block {
-    padding: var(--space-s);
-    margin-bottom: 24px;
+  padding: var(--space-s);
+  margin-bottom: 24px;
 }
 
 /* Section-specific layout ----------------------- */
 
 /* Mission: text column wider than image */
 .section-mission .col-content {
-    flex: 1.2;
+  flex: 1.2;
 }
 .section-mission .col-image {
-    flex: 0.8;
+  flex: 0.8;
 }
 
 /* Width constraint utility (desktop only) */
 @media (min-width: 769px) {
-    constrain-60 {
-        max-width: 60vw;
-    }
+  constrain-60 {
+    max-width: 60vw;
+  }
 }
 
 /* Alignment utility */
 .align-right {
-    text-align: right;
+  text-align: right;
 }
 .align-right .ctas {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 /* Sponsor: logo column narrower */
 .section-sponsor .col-image {
-    flex: 0.8;
+  flex: 0.8;
 }
 .section-sponsor .col-content {
-    flex: 1.2;
+  flex: 1.2;
 }
 
 /* Team: constrain photo width */
 .section-team .col-image {
-    max-width: 280px;
+  max-width: 280px;
 }
 
 /* Code of Conduct */
+.section-coc {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
 .section-coc ol {
-    padding-left: var(--space-m);
+  padding-left: var(--space-m);
 }
 
 /* Speaker grid: 48px from text group to grid, 24px between cards */
 .speaker-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
 }
 
 /* Footer */
 .footer {
-    padding: 100px 0;
+  padding: 100px 0;
 }
 .footer .ctas {
-    margin-top: 24px; /* extra 24px → 48px from text to buttons */
+  margin-top: 24px; /* extra 24px → 48px from text to buttons */
 }
 
 .footer .footer-image {
-    margin-top: 24px; /* 24px gap + 24px extra = 48px from text to image */
-    margin-bottom: 200px;
-    width: 100%;
+  margin-top: 24px; /* 24px gap + 24px extra = 48px from text to image */
+  margin-bottom: 200px;
+  width: 100%;
 }
 
 /* 6-column image link grid */
 .image-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 24px;
-    margin-top: 200px;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  margin-top: 200px;
+  width: 100%;
 }
 .image-grid a {
-    display: block;
+  display: block;
 }
 .image-grid .img-placeholder {
-    aspect-ratio: 1 / 1;
-    min-height: unset;
-    background-color: #f2edeb;
-    transition: ease-in-out;
-    transition-duration: 0.2s;
+  aspect-ratio: 1 / 1;
+  min-height: unset;
+  background-color: #f2edeb;
+  transition: ease-in-out;
+  transition-duration: 0.2s;
 }
 
 .image-grid .img-placeholder:hover {
-    rotate: -10deg
+  rotate: -10deg;
 }
 
 /* Typography spacing: 24px between vertical elements */
@@ -221,40 +366,40 @@ h3,
 h4,
 h5,
 h6 {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 /* Responsive ------------------------------------ */
 
 @media (max-width: 768px) {
-    .two-col {
-        flex-direction: column;
-        gap: 48px;
-    }
+  .two-col {
+    flex-direction: column;
+    gap: 48px;
+  }
 
-    .section-mission .col-content,
-    .section-mission .col-image {
-        flex: 1;
-    }
+  .section-mission .col-content,
+  .section-mission .col-image {
+    flex: 1;
+  }
 
-    .section-sponsor .col-image,
-    .section-sponsor .col-content {
-        flex: 1;
-    }
+  .section-sponsor .col-image,
+  .section-sponsor .col-content {
+    flex: 1;
+  }
 
-    .section-team .col-image {
-        max-width: 100%;
-    }
+  .section-team .col-image {
+    max-width: 100%;
+  }
 
-    .speaker-grid {
-        grid-template-columns: 1fr;
-    }
+  .speaker-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .image-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .image-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    .hero h1 {
-        max-width: 100%;
-    }
+  .hero h1 {
+    max-width: 100%;
+  }
 }
