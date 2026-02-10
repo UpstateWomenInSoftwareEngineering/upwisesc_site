@@ -206,6 +206,24 @@ section {
     }
 }
 
+// 6-column image link grid
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+    width: 100%;
+
+    a {
+        display: block;
+    }
+
+    .img-placeholder {
+        aspect-ratio: 1 / 1;
+        min-height: unset;
+    }
+}
+
 // Typography spacing: 24px between vertical elements
 p,
 h1,
@@ -247,6 +265,10 @@ h6 {
 
     .speaker-grid {
         grid-template-columns: 1fr;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .hero h1 {

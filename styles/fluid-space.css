@@ -186,8 +186,29 @@ section {
 
 .footer .footer-image {
     margin-top: 24px; /* 24px gap + 24px extra = 48px from text to image */
-    margin-bottom: 48px;
+    margin-bottom: 200px;
     width: 100%;
+}
+
+/* 6-column image link grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+    margin-top: 200px;
+    width: 100%;
+}
+.image-grid a {
+    display: block;
+}
+.image-grid .img-placeholder {
+    aspect-ratio: 1 / 1;
+    min-height: unset;
+    background-color: #f2edeb;
+}
+
+.image-grid .img-placeholder:hover {
+    rotate: -10deg
 }
 
 /* Typography spacing: 24px between vertical elements */
@@ -225,6 +246,10 @@ h6 {
 
     .speaker-grid {
         grid-template-columns: 1fr;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .hero h1 {
