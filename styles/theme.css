@@ -55,30 +55,28 @@ body {
 
 .btn-primary {
     background-color: var(--pink);
-    border-color: var(--pink);
+    border: 2px solid var(--pink);
     color: var(--white);
-    font-weight: 600;
     border-radius: 6px;
 }
 .btn-primary:hover,
 .btn-primary:focus {
-    background-color: var(--dark-purple);
-    border-color: var(--dark-purple);
-    color: var(--white);
+    background-color: transparent;
+    border-color: var(--pink);
+    color: var(--pink);
 }
 
 .btn-secondary {
-    background-color: transparent;
+    background-color: var(--dark-purple);
     border: 2px solid var(--dark-purple);
-    color: var(--dark-purple);
-    font-weight: 600;
+    color: var(--white);
     border-radius: 6px;
 }
 .btn-secondary:hover,
 .btn-secondary:focus {
-    background-color: var(--dark-purple);
+    background-color: transparent;
     border-color: var(--dark-purple);
-    color: var(--white);
+    color: var(--dark-purple);
 }
 
 .btn-outline {
