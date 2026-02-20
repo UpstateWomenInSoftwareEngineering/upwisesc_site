@@ -172,17 +172,10 @@ body {
 .section-mission,
 .section-persist,
 .section-photo-cta,
-.section-speakers {
-    background-color: var(--cream);
-}
-
+.section-speakers,
+.section-team,
 .section-sponsor {
-    background-color: var(--cream);
-    border-top: 1px solid var(--cream);
-}
-
-.section-team {
-    background-color: var(--cream);
+  background-color: var(--cream);
 }
 
 // Code of Conduct section -----------------------
@@ -274,6 +267,51 @@ body {
         font-size: var(--step--1);
         border-radius: 0 var(--space-3xs) var(--space-3xs) 0;
     }
+}
+
+// Talks section ---------------------------------
+
+.video-featured {
+    margin-bottom: var(--space-xl);
+
+    .ratio {
+        border-radius: var(--space-2xs);
+        overflow: hidden;
+    }
+
+    h4 {
+        margin-top: var(--space-s);
+        margin-bottom: var(--space-3xs);
+    }
+}
+
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-m);
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.video-card {
+    .ratio {
+        border-radius: var(--space-2xs);
+        overflow: hidden;
+    }
+
+    h4 {
+        margin-top: var(--space-s);
+        margin-bottom: var(--space-3xs);
+    }
+}
+
+.video-presenter {
+    color: var(--gray);
+    font-size: var(--step--1);
+    margin: 0;
 }
 
 // Footer ----------------------------------------

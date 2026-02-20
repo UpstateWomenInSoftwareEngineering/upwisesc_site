@@ -178,16 +178,9 @@ body {
 .section-mission,
 .section-persist,
 .section-photo-cta,
-.section-speakers {
-  background-color: var(--cream);
-}
-
+.section-speakers,
+.section-team,
 .section-sponsor {
-  background-color: var(--cream);
-  border-top: 1px solid var(--cream);
-}
-
-.section-team {
   background-color: var(--cream);
 }
 
@@ -283,4 +276,44 @@ body {
 
 .speaker-card:hover {
   rotate: -2deg;
+}
+
+/* Talks section --------------------------------- */
+
+.video-featured {
+  margin-bottom: var(--space-xl);
+}
+
+.video-featured .ratio,
+.video-card .ratio {
+  border-radius: var(--space-2xs);
+  overflow: hidden;
+}
+
+.video-featured h4 {
+  margin-top: var(--space-s);
+  margin-bottom: var(--space-3xs);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-m);
+}
+
+.video-card h4 {
+  margin-top: var(--space-s);
+  margin-bottom: var(--space-3xs);
+}
+
+.video-presenter {
+  color: var(--gray);
+  font-size: var(--step--1);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
 }
