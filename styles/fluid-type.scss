@@ -22,7 +22,14 @@
 body {
     font-family: "Rubik", sans-serif;
     font-size: var(--step-0);
+    line-height: var(--step-2);
+}
+
+a {
+    font-family: "Rubik", sans-serif;
+    font-size: var(--step-0);
     line-height: var(--step-3);
+    text-decoration: none;
 }
 
 h1,
@@ -36,31 +43,31 @@ h6 {
 
 h6 {
     font-size: var(--step-1);
-    line-height: var(--step-3);
+    line-height: var(--step-2);
 }
 
 h5 {
     font-size: var(--step-2);
-    line-height: var(--step-4);
+    line-height: var(--step-3);
 }
 
 h4 {
     font-size: var(--step-3);
-    line-height: var(--step-5);
+    line-height: var(--step-4);
 }
 
 h3 {
     font-size: var(--step-4);
-    line-height: var(--step-6);
+    line-height: var(--step-5);
 }
 
 h2 {
     font-size: var(--step-5);
-    line-height: var(--step-7);
+    line-height: var(--step-6);
 }
 
 h1 {
-    font-size: var(--step-6);
+    font-size: var(--step-7);
     line-height: var(--step-8);
 }
 

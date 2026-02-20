@@ -24,28 +24,24 @@ body {
 // Navbar ----------------------------------------
 
 .navbar {
-    background-color: var(--cream);
+    background-color: var(--dark-purple);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 100;
+    box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2);
 
     .navbar-brand {
-        color: var(--dark-purple);
-        font-weight: 700;
+        color: var(--cream);
         text-decoration: none;
+        font-weight: 500;
+        font-family: "Handjet", sans-serif;
         display: flex;
         align-items: center;
         gap: 0.5rem;
-
-        &:hover {
-            color: var(--dark-purple);
-        }
+        font-size: var(--step-3);
     }
-}
-
-.brand-icon {
-    display: inline-block;
-    width: 28px;
-    height: 28px;
-    background-color: var(--light-purple);
-    border-radius: 50%;
 }
 
 .nav-cta {
@@ -56,32 +52,44 @@ body {
 // Buttons ---------------------------------------
 
 .btn-primary {
-    background-color: var(--pink);
-    border-color: var(--pink);
+    background-color: var(--dark);
+    border: 2px solid var(--dark);
     color: var(--white);
-    font-weight: 600;
     border-radius: 6px;
 
     &:hover,
     &:focus {
-        background-color: var(--dark-purple);
-        border-color: var(--dark-purple);
-        color: var(--white);
+        background-color: transparent;
+        border-color: var(--dark);
+        color: var(--dark);
     }
 }
 
 .btn-secondary {
-    background-color: transparent;
+    background-color: var(--dark-purple);
     border: 2px solid var(--dark-purple);
-    color: var(--dark-purple);
-    font-weight: 600;
+    color: var(--white);
     border-radius: 6px;
 
     &:hover,
     &:focus {
-        background-color: var(--dark-purple);
+        background-color: transparent;
         border-color: var(--dark-purple);
-        color: var(--white);
+        color: var(--dark-purple);
+    }
+}
+
+.btn-tertiary {
+    background-color: var(--cream);
+    border: 2px solid var(--cream);
+    color: var(--dark);
+    border-radius: 6px;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        border-color: var(--cream);
+        color: var(--cream);
     }
 }
 
@@ -137,6 +145,7 @@ body {
     font-size: var(--step--1);
     width: 100%;
     min-height: 200px;
+    object-fit: cover;
 
     &.wide {
         aspect-ratio: 16 / 7;
@@ -200,13 +209,8 @@ body {
     .read-more {
         color: var(--cream);
         text-decoration: none;
-        font-weight: 600;
         display: block;
         text-align: right;
-
-        &:hover {
-            text-decoration: underline;
-        }
     }
 }
 
@@ -249,23 +253,32 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: var(--space-2xs);
+    background-color: #2d2d2d;
+    padding: 24px;
+    transition: ease-in-out;
+    transition-duration: 0.2s;
 
     .img-placeholder {
-        aspect-ratio: 1 / 1;
         min-height: unset;
-        border-radius: 0;
+        border-radius: var(--space-3xs);
+        margin-bottom: 24px;
     }
 
     .speaker-name {
-        position: absolute;
-        bottom: var(--space-s);
-        left: 0;
-        background-color: var(--pink);
-        color: var(--white);
-        padding: var(--space-3xs) var(--space-s);
-        font-weight: 700;
+        color: var(--cream);
+        font-size: var(--step-3);
+        line-height: var(--step-4);
+        font-family: "Handjet", sans-serif;
+    }
+
+    .speaker-title {
+        color: var(--cream);
         font-size: var(--step--1);
-        border-radius: 0 var(--space-3xs) var(--space-3xs) 0;
+        line-height: var(--step-1);
+    }
+
+    &:hover {
+        rotate: -2deg;
     }
 }
 

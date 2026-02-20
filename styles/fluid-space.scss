@@ -184,6 +184,9 @@ section {
 
 // Code of Conduct
 .section-coc {
+    margin-top: 200px;
+    margin-bottom: 200px;
+
     ol {
         padding-left: var(--space-m);
     }
@@ -191,6 +194,13 @@ section {
 
 // Speaker grid: 48px from text group to grid, 24px between cards
 .speaker-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.community-image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
@@ -204,6 +214,12 @@ section {
     .ctas {
         margin-top: 24px; // extra 24px → 48px from text to buttons
     }
+
+    .footer-image {
+        margin-top: 24px; // 24px gap + 24px extra = 48px from text to image
+        margin-bottom: 200px;
+        width: 100%;
+    }
 }
 
 // 6-column image link grid
@@ -211,7 +227,7 @@ section {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 24px;
-    margin-top: 48px;
+    margin-top: 200px;
     width: 100%;
 
     a {
@@ -221,6 +237,13 @@ section {
     .img-placeholder {
         aspect-ratio: 1 / 1;
         min-height: unset;
+        background-color: #f2edeb;
+        transition: ease-in-out;
+        transition-duration: 0.2s;
+
+        &:hover {
+            rotate: -10deg;
+        }
     }
 }
 
@@ -265,6 +288,10 @@ h6 {
 
     .speaker-grid {
         grid-template-columns: 1fr;
+    }
+
+    .community-image-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .image-grid {
