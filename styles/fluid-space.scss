@@ -44,198 +44,210 @@
     --space-11xl-12xl: clamp(22rem, 18.3636rem + 15.5152vw, 30rem);    /* Space 11xl-12xl: 352px → 480px */
 }
 
-// Layout ---------------------------------------
+// Layout ----------------------------------------
 
-// Central column for content
 .container {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 var(--space-m);
-    margin: 0 0;
 }
 
+// Navbar
 .navbar {
-    min-height: var(--space-2xl);
-    max-height: var(--space-2xl);
-    display: flex;
-    justify-content: center;
+    padding: var(--space-xs) 0;
 
-    .navbar-brand,
-    .nav-item {
-        min-width: var(--space-2xl);
+    .container {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .navbar-brand,
-    .nav-link {
-        padding: var(--space-3xs);
-        margin: 0;
-    }
-
-    .navbar-nav {
-        gap: var(--space-3xs);
-    }
-
-    .navbar-toggler {
-        padding: 0;
-    }
-
-    .navbar-collapse.show,
-    .navbar-collapse.collapsing {
-        .navbar-nav {
-            width: 100%;
-            padding: var(--space-l) var(--space-m) var(--space-xl) var(--space-m);
-            background-color: var(--upwise-purple);
-            position: absolute;
-            top: var(--space-2xl);
-            right: 0;
-            align-items: end;
-        }
     }
 }
 
+// Hero
+.hero {
+    padding: 100px 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    h1 {
+        max-width: 80%;
+        margin-bottom: 0;
+    }
+
+    .hero-subtitle {
+        margin-bottom: 0;
+    }
+
+    .hero-image {
+        margin-top: 24px; // 24px gap + 24px extra = 48px from text to image
+        width: 100%;
+    }
+}
+
+// Main
 main {
-    width: 100vw;
+    width: 100%;
+}
+
+// Sections: 100px top + 100px bottom = 200px between adjacent sections
+section {
+    padding: 100px 0;
+}
+
+// Two-column layout: 48px gap between text and content columns
+.two-col {
     display: flex;
-    flex-direction: column;
+    gap: 48px;
     align-items: center;
 
-    .container {
-        padding: var(--space-xl) var(--space-m);
-        display: flex;
-        flex-direction: column;
+    &.align-top {
+        align-items: flex-start;
+    }
+
+    &.align-center {
         align-items: center;
-        justify-content: center;
-        gap: var(--space-m);
+    }
 
-        #about,
-        #code_of_conduct {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            text-align: left;
-
-            >* {
-                flex: 1;
-            }
-        }
-
-        #about {
-            gap: var(--space-xl);
-
-            > :last-child {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-
-        .uw-row {
-            display: flex !important;
-            flex-direction: row;
-            align-items: stretch !important;
-            justify-content: stretch;
-            gap: var(--space-m);
-            flex-wrap: wrap;
-        }
+    .col-content,
+    .col-image {
+        flex: 1;
+        min-width: 0;
     }
 }
 
-header {
-    width: 100vw;
-    height: calc(100vh - var(--space-2xl));
-    padding: 0;
-    margin: 0;
+// CTA button groups
+.ctas {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: var(--space-l);
+    .btn {
+        padding: var(--space-2xs) var(--space-m);
+    }
+}
 
-        .splash {
-            width: var(--space-11xl-12xl);
+// Highlight block spacing
+.highlight-block {
+    padding: var(--space-s);
+    margin-bottom: 24px;
+}
 
-            img {
-                width: 100%;
-                height: auto;
-            }
-        }
+// Section-specific layout -----------------------
 
-        h1 {
-            margin-bottom: 0;
-        }
+// Mission: text column wider than image
+.section-mission {
+    .col-content {
+        flex: 1.2;
+    }
+    .col-image {
+        flex: 0.8;
+    }
+}
 
-        .ctas {
-            display: flex;
-            justify-content: center;
-            gap: var(--space-xs);
-            flex-wrap: wrap;
+// Width constraint utility (desktop only)
+@media (min-width: 769px) {
+    constrain-60 {
+        max-width: 60vw;
+    }
+}
 
-            .btn {
-                width: var(--space-7xl);
-                padding: var(--space-2xs) var(--space-s);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+// Alignment utility
+.align-right {
+    text-align: right;
+
+    .ctas {
+        justify-content: flex-end;
+    }
+}
+
+// Sponsor: logo column narrower
+.section-sponsor {
+    .col-image {
+        flex: 0.8;
+    }
+    .col-content {
+        flex: 1.2;
+    }
+}
+
+// Team: constrain photo width
+.section-team {
+    .col-image {
+        max-width: 280px;
+    }
+}
+
+// Code of Conduct
+.section-coc {
+    margin-top: 200px;
+    margin-bottom: 200px;
+
+    ol {
+        padding-left: var(--space-m);
+    }
+}
+
+// Speaker grid: 48px from text group to grid, 24px between cards
+.speaker-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.community-image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+// Footer
+.footer {
+    padding: 100px 0;
+
+    .ctas {
+        margin-top: 24px; // extra 24px → 48px from text to buttons
+    }
+
+    .footer-image {
+        margin-top: 24px; // 24px gap + 24px extra = 48px from text to image
+        margin-bottom: 200px;
+        width: 100%;
+    }
+}
+
+// 6-column image link grid
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+    margin-top: 200px;
+    width: 100%;
+
+    a {
+        display: block;
+    }
+
+    .img-placeholder {
+        aspect-ratio: 1 / 1;
+        min-height: unset;
+        background-color: #f2edeb;
+        transition: ease-in-out;
+        transition-duration: 0.2s;
+
+        &:hover {
+            rotate: -10deg;
         }
     }
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: var(--space-m);
-        padding: var(--space-xl) 0;
-
-        img {
-            width: var(--space-4xl);
-        }
-    }
-}
-
-// Elements -------------------------------------
-
-.uw-card {
-    height: 100%;
-    padding: var(--space-xl);
-    border-radius: var(--space-2xs);
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: stretch;
-    flex: 1;
-    box-shadow: 0 var(--space-3xs) var(--space-2xs) rgba(0, 0, 0, 0.1);
-
-    .uw-card-body {
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: stretch;
-        margin-bottom: auto;
-
-        p:last-child {
-            margin-bottom: 0;
-        }
-    }
-}
-
+// Typography spacing: 24px between vertical elements
 p,
 h1,
 h2,
@@ -243,19 +255,50 @@ h3,
 h4,
 h5,
 h6 {
-    margin-bottom: var(--space-m);
+    margin-bottom: 24px;
 }
 
-// Media queries --------------------------------
+// Responsive ------------------------------------
 
 @media (max-width: 768px) {
-
-    #about {
-        flex-direction: column !important;
-        gap: var(--space-2xs) !important;
+    .two-col {
+        flex-direction: column;
+        gap: 48px;
     }
 
-    .uw-row {
-        flex-direction: column !important;
+    .section-mission {
+        .col-content,
+        .col-image {
+            flex: 1;
+        }
+    }
+
+    .section-sponsor {
+        .col-image,
+        .col-content {
+            flex: 1;
+        }
+    }
+
+    .section-team {
+        .col-image {
+            max-width: 100%;
+        }
+    }
+
+    .speaker-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .community-image-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero h1 {
+        max-width: 100%;
     }
 }

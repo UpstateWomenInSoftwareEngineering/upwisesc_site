@@ -1,141 +1,316 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UpWiSE</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/theme.css">
-    <link rel="stylesheet" href="styles/fluid-type.css">
-    <link rel="stylesheet" href="styles/fluid-space.css">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDJF5Q41Q0"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-JDJF5Q41Q0');
-    </script>
-    <!-- Google font (Inter) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UpWiSE</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
+  <link rel="stylesheet" href="styles/fluid-type.css" />
+  <link rel="stylesheet" href="styles/fluid-space.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDJF5Q41Q0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-JDJF5Q41Q0");
+  </script>
+  <!-- Google fonts (Rubik + Handjet) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Rubik:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-              <!-- <img src="img/UpWiSE_Logo.png" width="30" height="30" alt=""> -->
-              UpWiSE
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#code_of_conduct">Code of Conduct</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://forms.gle/FUSQx2RRRVRKud1eA">Join Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://buy.stripe.com/7sI16O1hQ5dp7Li147">Donate</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://luma.com/upwisesc">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/UpstateWomenInSoftwareEngineering">GitHub</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://twitter.com/UpWiSESC">Twitter</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/upwisesc">Facebook</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/upwisesc">Instagram</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">UpWiSE </a>
+      <a target="_blank" class="btn btn-tertiary nav-cta" href="https://forms.gle/FUSQx2RRRVRKud1eA">Join Today</a>
+    </div>
+  </nav>
 
-    <header class="text-center bg-light">
-        <div class="container">
-            <div class="splash">
-                <img src="img/UpWiSE_Logo.png" alt="UpWiSE Logo">
-            </div>
-            <h1 class="fw-bold">Empowering Women in Tech Across South Carolina</h1>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <h1>
+        Empowering <span class="text-accent">Women in Tech</span> across South
+        Carolina
+      </h1>
+      <p>
+        Building confidence, community, and careers in South Carolina's tech
+        industry.
+      </p>
+      <div class="hero-image">
+        <img class="img-placeholder wide" src="./img/header-img.png" alt="Header Image" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Community-driven -->
+    <section class="section-mission">
+      <div class="container">
+        <div class="col-content">
+          <h3>We are <span class="text-accent">community-driven</span></h3>
+          <p class="constrain-60">
+            Every meetup, workshop, and project starts with the same belief:
+            women in tech are stronger together. Whether you're writing your
+            first line of code or leading an engineering team, there's a place
+            for you here.
+          </p>
+        </div>
+
+        <div class="community-image-grid">
+          <div>
+            <img class="img-placeholder" src="./img/upwise-ccc.png" alt="Header Image" />
+          </div>
+          <div>
+            <img class="img-placeholder" src="./img/upwise-helps.png" alt="Header Image" />
+          </div>
+          <div>
+            <img class="img-placeholder" src="./img/upwise-openworks.png" alt="Header Image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- We help women persist -->
+    <section class="section-persist">
+      <div class="container">
+        <div class="two-col align-top">
+          <div class="col-content">
+            <h3>Helping women persist and excel in the tech ecosystem.</h3>
+          </div>
+          <div class="col-content align-right">
+            <p>
+              From hands-on workshops and real-world projects to mentorship
+              and career guidance, we’re here to meet you where you are and
+              help you get where you want to go.
+            </p>
             <div class="ctas">
-                <a href="https://luma.com/upwisesc/" class="btn btn-primary">Attend an Event</a>
-                <a href="https://forms.gle/fSMDwDY4kFViggwd7" class="btn btn-secondary">Sign Up for Newsletter</a>
-                <a href="https://forms.gle/FUSQx2RRRVRKud1eA" class="btn btn-primary">Become a Member</a>
+              <a target="_blank" class="btn btn-secondary" href="https://luma.com/upwisesc?period=past">Events</a>
+              <a target="_blank" class="btn btn-primary" href="https://forms.gle/FUSQx2RRRVRKud1eA">Join Today</a>
             </div>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <div class="container">
-            <section id="about" class="uw-card">
-                <div>
-                    <h3 class="fw-bold">About Us</h3>
-                    <p>We are an empowered group within <strong>RefactorGVL</strong>, serving the upstate of South Carolina.</p>
-                    <p>Through the support of RefactorGVL, we assist women across South Carolina in building their technical skills and leadership abilities.</p>
-                    <p>We support women entering technology roles and those already in the field to persist and excel.</p>
-                </div>
-                <div>
-                    <img src="img/RGVL_Badge_Horizontal.svg" alt="Women in Tech" class="img-fluid rounded shadow-lg">
-                </div>
-            </section>
 
-            <div class="uw-row">
-                <div class="uw-card">
-                    <div class="uw-card-header">
-                        <h5>Supporting Women Entering Tech</h5>
-                    </div>
-                    <div class="uw-card-body">
-                        <p>We provide training sessions, resources, projects, and career advice to help women on their journey.</p>
-                    </div>
-                </div>
-                <div class="uw-card">
-                    <div class="uw-card-header">
-                        <h5>Helping Women Persist and Excel</h5>
-                    </div>
-                    <div class="uw-card-body">
-                        <p>We have many members who are mid to late career who share their wisdom with us.</p>
-                    </div>
-                </div>
-                <div class="uw-card">
-                    <div class="uw-card-header">
-                        <h5>Creating Opportunities in Tech</h5>
-                    </div>
-                    <div class="uw-card-body">
-                        <p>We foster an inclusive and positive environment throughout our meetups, projects, and events.</p>
-                    </div>
-                </div>
+    <!-- Commented out for now as YouTube video owner disabled embeddeding permissions -->
+    <!-- Talks -->
+    <!-- <section class="section-persist">
+      <div class="container">
+
+        <h3>Voices from our community</h3>
+        <p class="constrain-60">
+          Each talk is designed to inform, inspire, and equip women in tech across South Carolina. Explore past sessions
+          and discover perspectives from those building and leading in the industry.
+        </p>
+
+        <div class="video-featured">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/3KioPbXDfYo" title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h4>Level Up Your Legacy</h4>
+          <p class="video-presenter">Jen Bauer</p>
+        </div>
+
+        <div class="video-grid">
+          <div class="video-card">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/4PJSxQUz0oU" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
+            <h4>Fluid Design and Musical Harmony</h4>
+            <p class="video-presenter">Violet Kester</p>
+          </div>
 
-            <section id="code_of_conduct" class="uw-card">
-                <div>
-                    <h3 class="fw-bold">Code of Conduct</h3>
-                    <p>We do not tolerate abusive language of any kind in our space.  This group was created as a <strong>safe space</strong> for all members, including our staff.  Please be kind, respectful, helpful, and professional in all interactions.</p>
-                    <h5>UpWiSE Policies</h5>
-                    <p>
-                    <ol>
-                        <li><strong>Be Respectful:</strong>  Always treat others with kindness and respect. Disagreements are okay, but keep the conversation civil and constructive.</li>
-                        <li><strong>No Harassment:</strong>  Harassment of any kind, including offensive language, personal attacks, or belittling others, will not be tolerated.</li>
-                        <li><strong>Constructive Feedback Only:</strong>  When offering feedback, make sure it is helpful and supportive.  Focus on the work, not the person.</li>
-                        <li><strong>Respect Privacy:</strong>  Do not share private messages or sensitive information from the channel without explicit permission.</li>
-                        <li><strong>No Trolling or Disruptive Behavior:</strong>  Avoid posting messages intended to provoke or disrupt the flow of conversations.</li>
-                        <li><strong>Listen to Others:</strong>  Let everyone have a chance to speak and contribute. Avoid interrupting or dominating the conversation.</li>
-                        <li><strong>Be Inclusive:</strong>  Ensure your posts are welcoming and inclusive to all members, regardless of background or experience level.</li>
-                        <li><strong>Support Over Criticism:</strong>  Encourage others and highlight the positive.  If there is an issue, address it with respect and a solution-oriented mindset.</li>
-                        <li><strong>Use Professional Language:</strong>  Keep the tone professional and courteous at all times.  Avoid using inappropriate or offensive language,  This includes cursing or threatening behavior towards any member.</li>
-                        <li><strong>Assume Good Intentions:</strong>  If someone's post seems off, give them the benefit of the doubt.  Ask for clarification politely before reacting.</li>
-                    </ol></p>
-                    <p>It may help to ask yourself the following before posting or making a comment in public: "If my future boss was in this group, would I want them to see this?"</p>
-                    <h5>Consequences of Breaking This Policy</h5>
-                    <p>The above policies are enforced with zero tolerance. Any community participants found to be in violation will be immediately removed from the UpWiSE community and all its platforms.</p>
-                </div>
-            </section>
+          <div class="video-card">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/2Vsaq2bUl4E" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <h4>Running a House Off an Electric Car</h4>
+            <p class="video-presenter">Heather Bowes</p>
+          </div>
+
+          <div class="video-card">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/JcPbap-p8s4" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <h4>Veterans in Technology, Cybersecurity and STEM</h4>
+            <p class="video-presenter">Rachelle Waite-Bey</p>
+          </div>
         </div>
-    </main>
+      </div>
+    </section> -->
 
-    <footer class="footer">
-        <div class="container">
-            <span>©2024 - 2025 UpWiSE and RefactorGVL. All rights reserved.</span>
-            <img src="img/RGVL_Badge_Horizontal.svg" alt="Sponsor Logo">
+    <!-- UpWiSE Committee -->
+    <section class="section-speakers">
+      <div class="container">
+        <h3>
+          These women <span class="text-accent">keep us together</span>
+        </h3>
+
+        <p class="constrain-60">
+          Meet the team behind our mission: advocates, mentors, and peers working to empower every voice in our network.
+        </p>
+
+        <div class="speaker-grid">
+          <a target="_blank" href="https://www.linkedin.com/in/thejenbauer/" class="speaker-card">
+            <img class="img-placeholder" src="./img/jen-bauer.jpeg" alt="Jen Bauer Image" />
+            <div class="speaker-name">Jen Bauer</div>
+            <p class="speaker-title">Executive Director</p>
+          </a>
+
+          <a target="_blank" href="https://www.linkedin.com/in/gwen-murtha/" class="speaker-card">
+            <img class="img-placeholder" src="./img/gwen-murtha.jpeg" alt="Gwen Murtha Image" />
+            <div class="speaker-name">Gwen Murtha</div>
+            <p class="speaker-title">Director of Marketing and Communications</p>
+          </a>
+
+          <a target="_blank" href="https://www.linkedin.com/in/rachellewaitebey/" class="speaker-card">
+            <img class="img-placeholder" src="./img/shelly.jpg" alt="Rachelle Waite-Bey Image" />
+            <div class="speaker-name">Rachelle Waite-Bey</div>
+            <p class="speaker-title">Director of Community Outreach</p>
+          </a>
+
+          <a target="_blank" href="https://www.linkedin.com/in/karmen-kristina-durbin/" class="speaker-card">
+            <img class="img-placeholder" src="./img/karmen-durbin.jpg" alt="Karmen Durbin Image" />
+            <div class="speaker-name">Karmen Durbin</div>
+            <p class="speaker-title">Director of Technology and Operations</p>
+          </a>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Code of Conduct -->
+    <section id="code_of_conduct" class="section-coc">
+      <div class="container">
+        <h3>Code of Conduct</h3>
+        <ol>
+          <li>
+            <strong>Be Respectful:</strong> Always treat others with kindness
+            and respect. Disagreements are okay, but keep the conversation
+            civil and constructive.
+          </li>
+          <li>
+            <strong>No Harassment:</strong> Harassment of any kind, including
+            offensive language, personal attacks, or belittling others, will
+            not be tolerated.
+          </li>
+          <li>
+            <strong>Constructive Feedback Only:</strong> When offering
+            feedback, make sure it is helpful and supportive. Focus on the
+            work, not the person.
+          </li>
+          <li>
+            <strong>Respect Privacy:</strong> Do not share private messages or
+            sensitive information from the channel without explicit
+            permission.
+          </li>
+          <li>
+            <strong>No Trolling or Disruptive Behavior:</strong> Avoid posting
+            messages intended to provoke or disrupt the flow of conversations.
+          </li>
+          <li>
+            <strong>Listen to Others:</strong> Let everyone have a chance to
+            speak and contribute. Avoid interrupting or dominating the
+            conversation.
+          </li>
+        </ol>
+        <a target="_blank" class="read-more"
+          href="https://docs.google.com/document/d/1t3amFi74mevxSQBbmmBQE7Gb4jDChM7CXPqvgU3NyVE/edit?tab=t.0">Read More
+          &rarr;</a>
+      </div>
+    </section>
+
+    <!-- RefactorGVL Sponsor -->
+    <section class="section-sponsor">
+      <div class="container">
+        <div class="two-col align-center">
+          <div class="col-image">
+            <img class="img-placeholder" src="./img/refactor-gvl-logo.png" alt="RefactorGVL Logo" />
+          </div>
+          <div class="col-content">
+            <p>
+              We are an empowered group within RefactorGVL, serving the
+              upstate of South Carolina. Through the support of RefactorGVL,
+              we assist women across South Carolina in building their
+              technical skills and leadership abilities.
+            </p>
+            <a target="_blank" class="btn btn-secondary" href="https://buy.stripe.com/7sI16O1hQ5dp7Li147">Donate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Come say hello footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-image">
+        <img class="img-placeholder wide" src="./img/footer-img.png" alt="Footer Image" />
+      </div>
+
+      <h3>Come say hello!</h3>
+      <p class="constrain-60">
+        Whether you're exploring a career change, looking for your people, or
+        just curious, you're welcome here. <br />
+        Drop into an event and see what it's all about.
+      </p>
+      <div class="ctas">
+        <a target="_blank" class="btn btn-primary" href="https://forms.gle/FUSQx2RRRVRKud1eA">Join Today</a>
+        <a target="_blank" class="btn btn-secondary" href="https://luma.com/upwisesc?period=past">Events</a>
+      </div>
+
+      <div class="image-grid">
+        <a href="https://github.com/UpstateWomenInSoftwareEngineering" target="_blank">
+          <img class="img-placeholder"
+            src="https://p7.hiclipart.com/preview/593/30/489/github-computer-icons-commit-repository-github.jpg"
+            alt="Github Logo" /></a>
+
+        <a href="https://www.linkedin.com/groups/13069092/" target="_blank">
+          <img class="img-placeholder"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/3840px-LinkedIn_icon.svg.png"
+            alt="LinkedIn Logo" /></a>
+
+        <a href="https://www.facebook.com/upwisesc" target="_blank">
+          <img class="img-placeholder"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/500px-Facebook_logo_%28square%29.png"
+            alt="Facebook Logo" /></a>
+
+        <a href="https://x.com/UpWiSESC" target="_blank">
+          <img class="img-placeholder" src="https://cdn.worldvectorlogo.com/logos/twitter-logo-2.svg"
+            alt="Twitter/X Logo" /></a>
+
+        <a href="https://www.instagram.com/upwisesc" target="_blank">
+          <img class="img-placeholder" src="https://unblast.com/wp-content/uploads/2025/07/instagram-logo-colored.jpg"
+            alt="Instagram Logo" /></a>
+
+        <a href="#" target="_blank">
+          <img class="img-placeholder" src="https://heidiwaterhouse.com/wp-content/uploads/2024/11/bluesky_logo.jpg"
+            alt="Bluesky Logo" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
