@@ -342,7 +342,7 @@ section {
   width: 100%;
 }
 
-/* 6-column image link grid */
+/* Social icon link grid */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -353,16 +353,31 @@ section {
 .image-grid a {
   display: block;
 }
-.image-grid .img-placeholder {
+
+.social-icon {
   aspect-ratio: 1 / 1;
-  min-height: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #f2edeb;
-  transition: ease-in-out;
-  transition-duration: 0.2s;
+  color: #674253;
+  border-radius: 12px;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
-.image-grid .img-placeholder:hover {
-  rotate: -10deg;
+.social-icon:hover,
+.social-icon:focus-visible {
+  background-color: #674253;
+  color: #f2edeb;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .social-icon:hover,
+  .social-icon:focus-visible {
+    transform: rotate(-10deg);
+  }
 }
 
 /* Typography spacing: 24px between vertical elements */
