@@ -10,14 +10,6 @@
   --placeholder-bg: #c4c4c4;
 }
 
-html {
-  scrollbar-width: none;
-}
-
-html::-webkit-scrollbar {
-  display: none;
-}
-
 body {
   background-color: var(--cream);
   color: var(--dark);
@@ -192,6 +184,7 @@ body {
   color: var(--cream);
 }
 
+.section-coc h2,
 .section-coc h3 {
   color: var(--cream);
 }
@@ -275,8 +268,10 @@ body {
   line-height: var(--step-1);
 }
 
-.speaker-card:hover {
-  rotate: -2deg;
+@media (prefers-reduced-motion: no-preference) {
+  .speaker-card:hover {
+    rotate: -2deg;
+  }
 }
 
 /* Talks section --------------------------------- */

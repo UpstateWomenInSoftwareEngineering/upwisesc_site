@@ -10,13 +10,6 @@
     --placeholder-bg: #C4C4C4;
 }
 
-html {
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-        display: none;
-    }
-}
-
 body {
     background-color: var(--cream);
     color: var(--dark);
@@ -194,6 +187,7 @@ body {
     background-color: var(--dark-purple);
     color: var(--cream);
 
+    h2,
     h3 {
         color: var(--cream);
         font-weight: 700;
@@ -278,8 +272,10 @@ body {
         line-height: var(--step-1);
     }
 
-    &:hover {
-        rotate: -2deg;
+    @media (prefers-reduced-motion: no-preference) {
+        &:hover {
+            rotate: -2deg;
+        }
     }
 }
 

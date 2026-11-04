@@ -220,6 +220,18 @@
   margin-top: 24px; /* 24px gap + 24px extra = 48px from text to image */
   width: 100%;
 }
+.hero .hero-image img {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero .hero-image img {
+    width: 100%;
+  }
+}
 
 /* Main */
 main {
