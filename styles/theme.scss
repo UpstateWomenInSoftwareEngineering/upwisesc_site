@@ -3,9 +3,10 @@
     --light-purple: #D2B7D2;
     --cream: #F2EDEB;
     --pink: #F7717D;
+    --pink-text: #B83345;
     --white: #FFFFFF;
     --dark: #2D2D2D;
-    --gray: #888888;
+    --gray: #666666;
     --placeholder-bg: #C4C4C4;
 }
 
@@ -110,7 +111,7 @@ body {
 // Text accents ----------------------------------
 
 .text-accent {
-    color: var(--pink);
+    color: var(--pink-text);
 }
 
 .underline-accent {
