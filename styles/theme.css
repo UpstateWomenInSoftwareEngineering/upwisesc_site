@@ -152,10 +152,11 @@ body {
   min-height: unset;
 }
 
-.img-placeholder.sponsor-logo {
-  aspect-ratio: 3 / 1;
-  min-height: unset;
-  border-left: 4px solid var(--pink);
+.sponsor-logo {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
 }
 
 /* Section themes -------------------------------- */
@@ -253,6 +254,9 @@ body {
   min-height: unset;
   border-radius: var(--space-3xs);
   margin-bottom: 24px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
 }
 
 .speaker-card .speaker-name {
@@ -315,6 +319,18 @@ body {
   }
 }
 
+/* Footer ---------------------------------------- */
+
+.footer {
+  background-color: var(--dark-purple);
+  color: var(--cream);
+}
+
+.footer h2,
+.footer p {
+  color: var(--cream);
+}
+
 /* Cookie banner --------------------------------- */
 
 .cookie-banner {
@@ -365,7 +381,7 @@ body {
   margin-top: var(--space-m);
   margin-bottom: 0;
   font-size: var(--step--1);
-  color: var(--gray);
+  color: var(--cream);
 }
 
 .link-button {
@@ -380,5 +396,5 @@ body {
 
 .link-button:hover,
 .link-button:focus-visible {
-  color: var(--dark);
+  color: var(--pink-text);
 }

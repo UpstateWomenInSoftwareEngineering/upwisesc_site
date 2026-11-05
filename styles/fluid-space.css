@@ -317,8 +317,8 @@ section {
 
 /* Code of Conduct */
 .section-coc {
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .section-coc ol {
@@ -338,6 +338,12 @@ section {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 48px;
+}
+
+.community-image-grid img {
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
 }
 
 /* Footer */
@@ -365,23 +371,23 @@ section {
 }
 
 .social-icon {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #674253;
-  color: #f2edeb;
+  background-color: var(--cream);
+  color: var(--dark-purple);
   border-radius: 50%;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   text-decoration: none;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .social-icon:hover,
 .social-icon:focus-visible {
-  background-color: #b83345;
-  color: #f2edeb;
+  background-color: var(--pink-text);
+  color: var(--cream);
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -151,11 +151,13 @@ body {
         min-height: unset;
     }
 
-    &.sponsor-logo {
-        aspect-ratio: 3 / 1;
-        min-height: unset;
-        border-left: 4px solid var(--pink);
-    }
+}
+
+.sponsor-logo {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
 }
 
 // Section themes --------------------------------
@@ -257,6 +259,9 @@ body {
         min-height: unset;
         border-radius: var(--space-3xs);
         margin-bottom: 24px;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        object-fit: cover;
     }
 
     .speaker-name {
@@ -390,7 +395,7 @@ body {
     margin-top: var(--space-m);
     margin-bottom: 0;
     font-size: var(--step--1);
-    color: var(--gray);
+    color: var(--cream);
 }
 
 .link-button {
@@ -404,6 +409,6 @@ body {
 
     &:hover,
     &:focus-visible {
-        color: var(--dark);
+        color: var(--pink-text);
     }
 }
