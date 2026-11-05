@@ -339,3 +339,71 @@ body {
         color: var(--cream);
     }
 }
+
+// Cookie banner ---------------------------------
+
+.cookie-banner {
+    position: fixed;
+    left: var(--space-s);
+    right: var(--space-s);
+    bottom: var(--space-s);
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-s);
+    padding: var(--space-s);
+    background-color: var(--dark-purple);
+    color: var(--cream);
+    border-radius: var(--space-2xs);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.35);
+    font-size: var(--step--1);
+    max-width: 720px;
+    margin: 0 auto;
+
+    &[hidden] {
+        display: none;
+    }
+
+    .cookie-banner-text {
+        margin: 0;
+        flex: 1 1 260px;
+        color: var(--cream);
+    }
+
+    .cookie-banner-actions {
+        display: flex;
+        gap: var(--space-2xs);
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        font-size: var(--step--1);
+        padding: var(--space-3xs) var(--space-s);
+    }
+}
+
+// Footer fine-print link ------------------------
+
+.footer-fineprint {
+    margin-top: var(--space-m);
+    margin-bottom: 0;
+    font-size: var(--step--1);
+    color: var(--gray);
+}
+
+.link-button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    text-decoration: underline;
+    font: inherit;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+        color: var(--dark);
+    }
+}

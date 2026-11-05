@@ -233,27 +233,39 @@ section {
     }
 }
 
-// 6-column image link grid
+// Social icon row
 .image-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 24px;
-    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-s);
+    margin-top: var(--space-xl);
     width: 100%;
+}
 
-    a {
-        display: block;
+.social-icon {
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-purple);
+    color: var(--cream);
+    border-radius: 50%;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+        background-color: var(--pink-text);
+        color: var(--cream);
     }
 
-    .img-placeholder {
-        aspect-ratio: 1 / 1;
-        min-height: unset;
-        background-color: #f2edeb;
-        transition: ease-in-out;
-        transition-duration: 0.2s;
-
-        &:hover {
-            rotate: -10deg;
+    @media (prefers-reduced-motion: no-preference) {
+        &:hover,
+        &:focus-visible {
+            transform: scale(1.12);
         }
     }
 }
@@ -306,7 +318,7 @@ h6 {
     }
 
     .image-grid {
-        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-2xs);
     }
 
     .hero h1 {
