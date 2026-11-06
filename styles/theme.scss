@@ -3,17 +3,11 @@
     --light-purple: #D2B7D2;
     --cream: #F2EDEB;
     --pink: #F7717D;
+    --pink-text: #B83345;
     --white: #FFFFFF;
     --dark: #2D2D2D;
-    --gray: #888888;
+    --gray: #666666;
     --placeholder-bg: #C4C4C4;
-}
-
-html {
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-        display: none;
-    }
 }
 
 body {
@@ -110,7 +104,7 @@ body {
 // Text accents ----------------------------------
 
 .text-accent {
-    color: var(--pink);
+    color: var(--pink-text);
 }
 
 .underline-accent {
@@ -157,11 +151,13 @@ body {
         min-height: unset;
     }
 
-    &.sponsor-logo {
-        aspect-ratio: 3 / 1;
-        min-height: unset;
-        border-left: 4px solid var(--pink);
-    }
+}
+
+.sponsor-logo {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
 }
 
 // Section themes --------------------------------
@@ -193,6 +189,7 @@ body {
     background-color: var(--dark-purple);
     color: var(--cream);
 
+    h2,
     h3 {
         color: var(--cream);
         font-weight: 700;
@@ -262,6 +259,9 @@ body {
         min-height: unset;
         border-radius: var(--space-3xs);
         margin-bottom: 24px;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        object-fit: cover;
     }
 
     .speaker-name {
@@ -277,8 +277,10 @@ body {
         line-height: var(--step-1);
     }
 
-    &:hover {
-        rotate: -2deg;
+    @media (prefers-reduced-motion: no-preference) {
+        &:hover {
+            rotate: -2deg;
+        }
     }
 }
 
@@ -340,5 +342,73 @@ body {
 
     p {
         color: var(--cream);
+    }
+}
+
+// Cookie banner ---------------------------------
+
+.cookie-banner {
+    position: fixed;
+    left: var(--space-s);
+    right: var(--space-s);
+    bottom: var(--space-s);
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-s);
+    padding: var(--space-s);
+    background-color: var(--dark-purple);
+    color: var(--cream);
+    border-radius: var(--space-2xs);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.35);
+    font-size: var(--step--1);
+    max-width: 720px;
+    margin: 0 auto;
+
+    &[hidden] {
+        display: none;
+    }
+
+    .cookie-banner-text {
+        margin: 0;
+        flex: 1 1 260px;
+        color: var(--cream);
+    }
+
+    .cookie-banner-actions {
+        display: flex;
+        gap: var(--space-2xs);
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        font-size: var(--step--1);
+        padding: var(--space-3xs) var(--space-s);
+    }
+}
+
+// Footer fine-print link ------------------------
+
+.footer-fineprint {
+    margin-top: var(--space-m);
+    margin-bottom: 0;
+    font-size: var(--step--1);
+    color: var(--cream);
+}
+
+.link-button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    text-decoration: underline;
+    font: inherit;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+        color: var(--pink-text);
     }
 }

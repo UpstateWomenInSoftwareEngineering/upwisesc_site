@@ -220,6 +220,18 @@
   margin-top: 24px; /* 24px gap + 24px extra = 48px from text to image */
   width: 100%;
 }
+.hero .hero-image img {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero .hero-image img {
+    width: 100%;
+  }
+}
 
 /* Main */
 main {
@@ -305,8 +317,8 @@ section {
 
 /* Code of Conduct */
 .section-coc {
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .section-coc ol {
@@ -328,6 +340,12 @@ section {
   margin-top: 48px;
 }
 
+.community-image-grid img {
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+}
+
 /* Footer */
 .footer {
   padding: 100px 0;
@@ -342,27 +360,41 @@ section {
   width: 100%;
 }
 
-/* 6-column image link grid */
+/* Social icon row */
 .image-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 24px;
-  margin-top: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-s);
+  margin-top: var(--space-xl);
   width: 100%;
 }
-.image-grid a {
-  display: block;
-}
-.image-grid .img-placeholder {
-  aspect-ratio: 1 / 1;
-  min-height: unset;
-  background-color: #f2edeb;
-  transition: ease-in-out;
-  transition-duration: 0.2s;
+
+.social-icon {
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cream);
+  color: var(--dark-purple);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.image-grid .img-placeholder:hover {
-  rotate: -10deg;
+.social-icon:hover,
+.social-icon:focus-visible {
+  background-color: var(--pink-text);
+  color: var(--cream);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .social-icon:hover,
+  .social-icon:focus-visible {
+    transform: scale(1.12);
+  }
 }
 
 /* Typography spacing: 24px between vertical elements */
@@ -407,7 +439,7 @@ h6 {
   }
 
   .image-grid {
-    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2xs);
   }
 
   .hero h1 {

@@ -3,18 +3,11 @@
   --light-purple: #d2b7d2;
   --cream: #f2edeb;
   --pink: #f7717d;
+  --pink-text: #b83345;
   --white: #ffffff;
   --dark: #2d2d2d;
-  --gray: #888888;
+  --gray: #666666;
   --placeholder-bg: #c4c4c4;
-}
-
-html {
-  scrollbar-width: none;
-}
-
-html::-webkit-scrollbar {
-  display: none;
 }
 
 body {
@@ -111,7 +104,7 @@ body {
 /* Text accents ---------------------------------- */
 
 .text-accent {
-  color: var(--pink);
+  color: var(--pink-text);
 }
 
 .underline-accent {
@@ -159,10 +152,11 @@ body {
   min-height: unset;
 }
 
-.img-placeholder.sponsor-logo {
-  aspect-ratio: 3 / 1;
-  min-height: unset;
-  border-left: 4px solid var(--pink);
+.sponsor-logo {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
 }
 
 /* Section themes -------------------------------- */
@@ -191,6 +185,7 @@ body {
   color: var(--cream);
 }
 
+.section-coc h2,
 .section-coc h3 {
   color: var(--cream);
 }
@@ -259,6 +254,9 @@ body {
   min-height: unset;
   border-radius: var(--space-3xs);
   margin-bottom: 24px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
 }
 
 .speaker-card .speaker-name {
@@ -274,8 +272,10 @@ body {
   line-height: var(--step-1);
 }
 
-.speaker-card:hover {
-  rotate: -2deg;
+@media (prefers-reduced-motion: no-preference) {
+  .speaker-card:hover {
+    rotate: -2deg;
+  }
 }
 
 /* Talks section --------------------------------- */
@@ -317,4 +317,84 @@ body {
   .video-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Footer ---------------------------------------- */
+
+.footer {
+  background-color: var(--dark-purple);
+  color: var(--cream);
+}
+
+.footer h2,
+.footer p {
+  color: var(--cream);
+}
+
+/* Cookie banner --------------------------------- */
+
+.cookie-banner {
+  position: fixed;
+  left: var(--space-s);
+  right: var(--space-s);
+  bottom: var(--space-s);
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-s);
+  padding: var(--space-s);
+  background-color: var(--dark-purple);
+  color: var(--cream);
+  border-radius: var(--space-2xs);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.35);
+  font-size: var(--step--1);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.cookie-banner[hidden] {
+  display: none;
+}
+
+.cookie-banner-text {
+  margin: 0;
+  flex: 1 1 260px;
+  color: var(--cream);
+}
+
+.cookie-banner-actions {
+  display: flex;
+  gap: var(--space-2xs);
+  flex-wrap: wrap;
+}
+
+.cookie-banner .btn {
+  font-size: var(--step--1);
+  padding: var(--space-3xs) var(--space-s);
+}
+
+/* Footer fine-print link ------------------------ */
+
+.footer-fineprint {
+  margin-top: var(--space-m);
+  margin-bottom: 0;
+  font-size: var(--step--1);
+  color: var(--cream);
+}
+
+.link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  text-decoration: underline;
+  font: inherit;
+  cursor: pointer;
+}
+
+.link-button:hover,
+.link-button:focus-visible {
+  color: var(--pink-text);
 }
